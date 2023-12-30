@@ -374,7 +374,7 @@ export function Landing() {
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Contact Us</h2>
               <p
                 className="max-w-[900px] text-black-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-black-400">
-                Have any questions or need help? Don't hesitate to reach out.
+                Have any questions or need help? Don&apos;t hesitate to reach out.
               </p>
             </div>
           </div>
