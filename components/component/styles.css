@@ -1,0 +1,33 @@
+/* Add the following styles to create hover effects for the cards in the landing page using Tailwind CSS */
+
+/* For the main section */
+.hover\:shadow-lg:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+  border: solid rgba(238, 255, 0, 0.877);
+}
+
+/* For the insights section */
+#insights .hover\:shadow-lg:hover {
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+  border: solid rgba(238, 255, 0, 0.877);
+}
+
+/* For the contact section */
+#contact .hover\:shadow-lg:hover {
+  box-shadow: 0 15px 30px -8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+  border: solid rgba(238, 255, 0, 0.877);
+}
+
+/* For the training section */
+#training .hover\:shadow-lg:hover {
+  box-shadow: 0 10px 20px -6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+  transition: all 0.3s ease;
+  border: solid rgba(238, 255, 0, 0.877);
+}
