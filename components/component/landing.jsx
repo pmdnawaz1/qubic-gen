@@ -10,6 +10,11 @@ import './styles.css'
 export function Landing() {
   const [activeLink, setActiveLink] = useState(null);
 
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [submitting, setSubmitting] = useState(false);
+
   const handleSetActive = (to) => {
     setActiveLink(to);
   };
@@ -19,6 +24,33 @@ export function Landing() {
       duration: 800,
       smooth: 'easeInOutQuart',
     });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setSubmitting(true);
+
+    try {
+      const response = await fetch('/api/sendEmail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      if (response.ok) {
+        // Handle success, e.g. show a success message to the user
+        console.log('Email sent successfully');
+      } else {
+        // Handle error, e.g. show an error message to the user
+        console.error('Failed to send email');
+      }
+    } catch (error) {
+      console.error('Error sending email:', error);
+    }
+
+    setSubmitting(false);
   };
 
   return (
@@ -35,7 +67,7 @@ export function Landing() {
           
           className={`text-sm font-medium hover:underline underline-offset-4 cursor-pointer ${activeLink === 'home' ? 'active' : ''}`}
         >
-          IT Company
+          QubicGen is a IT consulting & Training company based in Ananthapur, India 
         </ScrollLink>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <ScrollLink
@@ -97,13 +129,13 @@ export function Landing() {
                 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
                 QubicGen IT consulting and Training
               </h1>
-              <p className="max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
+              <p className="max-w-[600px] text-black-500 md:text-xl dark:text-black-400">
                 Specializing in RPA, UI.Path, .NET, and SQL database services.
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row">
               <Link
-                className="inline-flex h-10 items-center justify-center rounded-md bg-gray-900 px-8 text-sm font-medium text-gray-50 shadow transition-colors hover:bg-gray-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90 dark:focus-visible:ring-gray-300"
+                className="inline-flex h-10 items-center justify-center rounded-md bg-black-900 px-8 text-sm font-medium text-black-50 shadow transition-colors hover:bg-black-900/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-black-950 disabled:pointer-events-none disabled:opacity-50 dark:bg-black-50 dark:text-black-900 dark:hover:bg-black-50/90 dark:focus-visible:ring-black-300"
                 href="#">
                 Explore Our Services
               </Link>
@@ -112,7 +144,7 @@ export function Landing() {
         </div>
       </section>
       <section
-        className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800"
+        className="w-full py-12 md:py-24 lg:py-32 bg-black-100 dark:bg-yellowBG"
         id="who_are_we">
         <div className="container px-4 md:px-6">
           <div
@@ -120,7 +152,7 @@ export function Landing() {
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Who We Are</h2>
               <p
-                className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                className="max-w-[900px] text-black-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-black-400">
                 Founded in 2022, we are a team of IT professionals dedicated to delivering top-notch RPA, UI.Path,
                 .NET, and SQL database services.
               </p>
@@ -168,7 +200,7 @@ export function Landing() {
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight">Our Consulting Services</h2>
             <p
-              className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+              className="max-w-[600px] text-black-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-black-400">
               We offer a wide range of consulting services to help you optimize your IT operations.
             </p>
           </div>
@@ -203,7 +235,7 @@ export function Landing() {
         </div>
       </section>
       <section
-        className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800"
+        className="w-full py-12 md:py-24 lg:py-32 bg-black-100 dark:bg-yellowBG"
         id="training">
         <div className="container px-4 md:px-6">
           <div
@@ -211,7 +243,7 @@ export function Landing() {
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Training Programs</h2>
               <p
-                className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                className="max-w-[900px] text-black-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-black-400">
                 We offer a variety of training programs to help you improve your skills and knowledge.
               </p>
             </div>
@@ -271,7 +303,7 @@ export function Landing() {
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Insights & Resources</h2>
               <p
-                className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                className="max-w-[900px] text-black-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-black-400">
                 Explore our latest insights, case studies, and whitepapers to stay up-to-date on industry trends and
                 best practices.
               </p>
@@ -333,7 +365,7 @@ export function Landing() {
         </div>
       </section>
       <section
-        className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800"
+        className="w-full py-12 md:py-24 lg:py-32 bg-black-100 dark:bg-yellowBG"
         id="contact">
         <div className="container px-4 md:px-6">
           <div
@@ -341,7 +373,7 @@ export function Landing() {
             <div className="space-y-2">
               <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl">Contact Us</h2>
               <p
-                className="max-w-[900px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
+                className="max-w-[900px] text-black-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-black-400">
                 Have any questions or need help? Don't hesitate to reach out.
               </p>
             </div>
@@ -352,15 +384,30 @@ export function Landing() {
                 <CardTitle>Contact Form</CardTitle>
               </CardHeader>
               <CardContent>
-                <form className="grid gap-6">
-                  <Input id="name" placeholder="Name" />
-                  <Input id="email" placeholder="Email" />
-                  <textarea
-                    className="h-[150px] w-full p-3 border rounded-md"
-                    id="message"
-                    placeholder="Your message" />
-                  <Button type="submit">Submit</Button>
-                </form>
+              <form onSubmit={handleSubmit} className="grid gap-6">
+      <Input
+        id="name"
+        placeholder="Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <Input
+        id="email"
+        placeholder="Email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <textarea
+        className="h-[150px] w-full p-3 border rounded-md"
+        id="message"
+        placeholder="Your message"
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+      />
+      <Button type="submit" disabled={submitting}>
+        {submitting ? 'Submitting...' : 'Submit'}
+      </Button>
+    </form>
               </CardContent>
             </Card>
           </div>
@@ -369,7 +416,7 @@ export function Landing() {
     </main>
     <footer
       className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-      <p className="text-xs text-gray-500 dark:text-gray-400">© IT Company. All rights reserved.</p>
+      <p className="text-xs text-black-500 dark:text-black-400">© IT Company. All rights reserved.</p>
       <nav className="sm:ml-auto flex gap-4 sm:gap-6">
         <Link className="text-xs hover:underline underline-offset-4" href="#">
           Privacy Policy
@@ -380,25 +427,6 @@ export function Landing() {
       </nav>
     </footer>
   </>);
-}
-
-
-function FacebookIcon(props) {
-  return (
-    (<svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round">
-      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-    </svg>)
-  );
 }
 
 export default Landing;
