@@ -32,7 +32,7 @@ const WhoWeAreComponent = () => {
       </p>
 
       <p className="text-lg leading-7 mb-6">
-        At QubicGen, we believe in the power of innovation and collaboration. We have a dynamic team that is passionate about leveraging the latest technologies to drive success. Whether it's RPA, UI Path, SQL databases, .NET, or web development, we excel in a wide range of technology domains.
+        At QubicGen, we believe in the power of innovation and collaboration. We have a dynamic team that is passionate about leveraging the latest technologies to drive success. Whether it&apos;s RPA, UI Path, SQL databases, .NET, or web development, we excel in a wide range of technology domains.
       </p>
 
       <p className="text-lg leading-7 mb-6">
