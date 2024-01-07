@@ -1,0 +1,4 @@
+.zoom-out {
+  transform: scale(1.05); /* Adjust the scale value as desired */
+  transition: transform 0.5s ease; /* Adjust the transition duration and timing function as desired */
+}

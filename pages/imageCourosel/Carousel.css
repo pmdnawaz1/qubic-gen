@@ -1,0 +1,30 @@
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%; 
+  margin: auto;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.arrow-button {
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.left {
+  transform: rotate(180deg);
+}
+
+.blurred {
+  filter: blur(5px); /* Add blur effect to side images */
+}
