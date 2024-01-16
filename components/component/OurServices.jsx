@@ -1,5 +1,5 @@
 "use client"
-import { Button } from "@/components/ui/button"
+// import { button } from "@/components/ui/button"
 import { useState } from 'react';
 import Image from "next/image"
 import RPA from "../../public/images/RPA.jpg"
@@ -88,11 +88,11 @@ export default function Component() {
               />
               <div className="absolute bottom-0 left-0 right-0 bg-opacity-50 bg-transperent p-4">
                 <h3 className="text-xl font-semibold">{image.title}</h3>
-                <Button class="m-4 border-2 w-32 h-8 border-yellow-500 ">
+                <button class="m-4 border-2 w-32 h-8 border-yellow-500 ">
                 
                 Know More
                
-                </Button>
+                </button>
               </div>
             </div>
           ))}
