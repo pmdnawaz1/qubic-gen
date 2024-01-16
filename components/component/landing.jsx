@@ -8,9 +8,13 @@ import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import Header from '../component/Header';
 import OurServices from '../component/OurServices';
 import Footer from '../component/Footer';
-import Courosel from '../component/Courosel';
+import Banner from './Banner';
+import Image from 'next/image';
+import mountain from '../../public/images/mountain.jpg';
 
 import './styles.css'
+import '../../app/globals.css'
+// import Banner from "./banner"
 
 export function Landing() {
   const [activeLink, setActiveLink] = useState(null);
@@ -61,38 +65,230 @@ export function Landing() {
   return (
     <>
       <Header/>
-      <Courosel/>
-    <main className="flex-1">
-      <section className="w-full py-6 sm:py-12 md:py-24 lg:py-32 xl:py-48">
-        <div className="container px-4 md:px-6">
-          <div className="flex flex-col justify-center space-y-4">
-            <div className="space-y-2">
-              <h1
-                className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                QubicGen IT consulting and Training
-              </h1>
-              <p className="max-w-[600px] text-black-500 md:text-xl dark:text-black-400">
-                Specializing in RPA, UI Path, .NET, and SQL database services.
+      {/* <Courosel/> */}
+      <Banner/>
+     
+        <section
+          className="bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/placeholder.svg')",
+          }}
+        >
+         
+        </section>
+        <section className="container mx-auto px-4 py-8">
+          <div className="grid grid-cols-3 gap-4">
+            <Card className="bg-[#F0F0F3] text-black">
+              <CardContent>
+                <BaselineIcon className="h-6 w-6" />
+                <h3 className="font-bold">Reliable</h3>
+                <p>Reliable to be the voice of your business for the digital future.</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-[#F0F0F3] text-black">
+              <CardContent>
+                <XIcon className="h-6 w-6" />
+                <h3 className="font-bold">Experienced</h3>
+                <p>Experienced in-house team with an agile mindset.</p>
+              </CardContent>
+            </Card>
+            <Card className="bg-[#F0F0F3] text-black">
+              <CardContent>
+                <CheckIcon className="h-6 w-6" />
+                <h3 className="font-bold">Compliance</h3>
+                <p>Compliance to enable digital transformation with ease.</p>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+        <OurServices/>
+        <div className="bg-[#062d42] py-8">
+  <div className="container mx-auto px-4 flex">
+    <div className="w-full">
+      <h2 className="text-2xl font-bold text-white">Why QubicGen</h2>
+      <Button className="text-white mt-4 bg-[#7b0032] hover:underline" variant="outline" href="#">
+        Get to know us more
+      </Button>
+    </div>
+    <p className="text-white ml-12">
+      QubicGen, situated in the dynamic and thriving city of Anantapur, Andhra Pradesh, India, stands as a beacon of knowledge and a catalyst for success. Our mission is to bridge the gap between learning and achievement, fostering an environment where ideas flourish and ambitions are realized. With a focus on innovation and excellence, QubicGen empowers individuals to unlock their potential and contribute meaningfully to their communities. Here, tradition meets technology, creating a unique synergy that inspires....
+    </p>
+  </div>
+</div>
+  
+        <section className="container mx-auto px-4 py-8">
+          <h2 className="text-2xl font-bold">Partnership & Alliances</h2>
+          <div className="h-2 w-24 bg-[#FFD700] mb-8" />
+          <div className="flex justify-between items-center mt-4">
+            <Image
+              alt="IBM"
+              height="50"
+              src="/placeholder.svg"
+              style={{
+                aspectRatio: "150/50",
+                objectFit: "cover",
+              }}
+              width="150"
+            />
+            <Image
+              alt="Microsoft"
+              height="50"
+              src="/placeholder.svg"
+              style={{
+                aspectRatio: "150/50",
+                objectFit: "cover",
+              }}
+              width="150"
+            />
+            <Image
+              alt="SAP"
+              height="50"
+              src="/placeholder.svg"
+              style={{
+                aspectRatio: "150/50",
+                objectFit: "cover",
+              }}
+              width="150"
+            />
+            <Image
+              alt="Tesla"
+              height="50"
+              src="/placeholder.svg"
+              style={{
+                aspectRatio: "150/50",
+                objectFit: "cover",
+              }}
+              width="150"
+            />
+            <Image
+              alt="Adobe"
+              height="50"
+              src="/placeholder.svg"
+              style={{
+                aspectRatio: "150/50",
+                objectFit: "cover",
+              }}
+              width="150"
+            />
+          </div>
+          <Link className="text-blue-600 hover:underline" href="#">
+            View all
+          </Link>
+        </section>
+        <section className="container mx-auto px-4 py-8">
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <h2 className="text-2xl font-bold">What people say about us</h2>
+              <div className="h-2 w-24 bg-[#FFD700] mb-8" />
+              <p className="mt-2">
+              &quot;I had the privilege of working with QubicGen on a digital project. The team&apos;s expertise and dedication
+                were impressive.&quot;
               </p>
+              <p className="mt-2">- John Doe, CEO of Innotech</p>
             </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row">
-            <button type="button" className="text-white bg-yellow-700 hover:bg-yellow-800 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-yellow-600 dark:hover:bg-yellow-700 dark:focus:ring-yellow-800">
-              Explore our services
-              <svg className="rtl:rotate-180 w-3.5 h-3.5 ms-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-              </svg>
-              </button>
+            <div>
+              <h2 className="text-2xl font-bold">Our location</h2>
+              <div className="h-2 w-24 bg-[#FFD700] mb-8" />
+              <Image
+                alt="Map"
+                className="mt-2"
+                height="200"
+                src="/placeholder.svg"
+                style={{
+                  aspectRatio: "300/200",
+                  objectFit: "cover",
+                }}
+                width="300"
+              />
             </div>
           </div>
-        </div>
-      </section>
+        </section>
       
-      <OurServices/>
     
-      
-    </main>
+
     <Footer/>
   </>);
 }
+function BaselineIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M4 20h16" />
+      <path d="m6 16 6-12 6 12" />
+      <path d="M8 12h8" />
+    </svg>
+  )
+}
 
+
+function CheckIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <polyline points="20 6 9 17 4 12" />
+    </svg>
+  )
+}
+
+
+function FlagIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
+      <line x1="4" x2="4" y1="22" y2="15" />
+    </svg>
+  )
+}
+
+
+function XIcon(props) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M18 6 6 18" />
+      <path d="m6 6 12 12" />
+    </svg>
+  )
+}
 export default Landing;

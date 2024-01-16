@@ -16,22 +16,32 @@ export default function Component() {
     {
       src: RPA,
       alt: "RPA",
-      title: "RPA",
+      title: "Cloud Accerleration",
     },
     {
       src: sql,
       alt: "sql",
-      title: "SQL",
+      title: "Data Modernization",
     },
     {
       src: UI,
       alt: "UI",
-      title: "UI",
+      title: "Automation & Optimization",
     },
     {
       src: Net,
       alt: "Net",
-      title: "Net",
+      title: "Digital Transformation",
+    },
+    {
+      src: Net,
+      alt: "Net",
+      title: "Quality Analysis & Testing",
+    },
+    {
+      src: Net,
+      alt: "Net",
+      title: "Enterprise Application Integration",
     }
   ]
 
@@ -52,9 +62,10 @@ export default function Component() {
   };
 
   return (
-    <div className="bg-black text-white">
+    <div className=" text-white">
       <div className="py-8 px-4 lg:px-8">
-        <h2 className="text-3xl font-bold mb-6">Discover the Qubic Gen Expertise</h2>
+        <h2 className="text-3xl text-black font-bold mb-6">Discover the Qubic Gen Expertise</h2>
+         <div className="h-2 w-24 bg-[#FFD700] mb-8" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {images.map((image, index) => (
             <div
@@ -71,16 +82,17 @@ export default function Component() {
                 style={{
                   aspectRatio: "600/400",
                   objectFit: "cover",
+                  filter: "brightness(0.4)",
                 }}
                 width="600"
               />
-              <div className="absolute bottom-0 left-0 right-0 bg-opacity-50 bg-black p-4">
+              <div className="absolute bottom-0 left-0 right-0 bg-opacity-50 bg-transperent p-4">
                 <h3 className="text-xl font-semibold">{image.title}</h3>
-                <Button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
-<span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-Read More
-</span>
-</Button>
+                <Button class="m-4 border-2 w-32 h-8 border-yellow-500 ">
+                
+                Know More
+               
+                </Button>
               </div>
             </div>
           ))}

@@ -1,4 +1,5 @@
-
+"use client"
+import { useState, useEffect } from 'react';
 import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -7,6 +8,15 @@ import { TableHead, TableRow, TableHeader, TableCell, TableBody, Table } from "@
 import '../../app/globals.css'
 
 export function Admin() {
+  const [data, setData] = useState([]);
+
+    useEffect(() => {
+      fetch('/api/fetchData')
+        .then(response => response.json())
+        .then(data => setData(data))
+        .catch(error => console.error('Error fetching data:', error));
+    }, []);
+
   return (
     (<div className="grid min-h-screen w-full lg:grid-cols-[280px_1fr]">
       <div className="hidden border-r bg-yellow-100/40 lg:block">
@@ -77,31 +87,17 @@ export function Admin() {
                 </TableRow>
               </TableHeader>
               <TableBody>
-                <TableRow>
-                  <TableCell className="font-medium">John Doe</TableCell>
-                  <TableCell>johndoe@example.com</TableCell>
-                  <TableCell>Product Inquiry</TableCell>
-                  <TableCell>+1 234 567 890</TableCell>
-                  <TableCell>New York, USA</TableCell>
-                  <TableCell>Client</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">Jane Smith</TableCell>
-                  <TableCell>janesmith@example.com</TableCell>
-                  <TableCell>Technical Support</TableCell>
-                  <TableCell>+1 987 654 321</TableCell>
-                  <TableCell>Los Angeles, USA</TableCell>
-                  <TableCell>Student</TableCell>
-                </TableRow>
-                <TableRow>
-                  <TableCell className="font-medium">Richard Roe</TableCell>
-                  <TableCell>richardroe@example.com</TableCell>
-                  <TableCell>Product Supply</TableCell>
-                  <TableCell>+1 123 456 789</TableCell>
-                  <TableCell>Chicago, USA</TableCell>
-                  <TableCell>Client</TableCell>
-                </TableRow>
-              </TableBody>
+  { data.map((item, index) => (
+    <TableRow key={index}>
+      <TableCell className="font-medium">{item.name}</TableCell>
+      <TableCell>{item.email}</TableCell>
+      <TableCell>{item.requirement}</TableCell>
+      <TableCell>{item.phoneNumber}</TableCell>
+      <TableCell>{item.location}</TableCell>
+      <TableCell>{item.type}</TableCell>
+    </TableRow>
+  ))}
+</TableBody>
             </Table>
           </div>
         </main>

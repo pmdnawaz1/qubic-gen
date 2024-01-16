@@ -80,22 +80,38 @@ const HeaderWithDropdown = () => {
   };
   
   return (
-    <div className="header-wrapper">
-       
-      <ScrollLink
-        to="home"
-        spy={true}
-        smooth={true}
-        offset={-70}
-        duration={800}
-        onSetActive={handleSetActive}
-        onClick={() => handleScrollTo('home')}
-        className={`text-sm font-medium hover:underline underline-offset-4 cursor-pointer ${activeLink === 'home' ? 'active' : ''}`}
-      >
-      
-        <Image src={logo} width={120} height={32} alt="Logo" className="m-2" />
-      </ScrollLink>
-      <nav className="flex justify-center gap-4 sm:gap-6">
+    <div className="header-wrapper ">
+     <div className="flex items-center justify-between w-4/5 mx-auto">
+  <ScrollLink
+    to="home"
+    spy={true}
+    smooth={true}
+    offset={-70}
+    duration={800}
+    onSetActive={handleSetActive}
+    onClick={() => handleScrollTo('home')}
+    className={`text-sm font-medium hover:underline underline-offset-4 cursor-pointer ${activeLink === 'home' ? 'active' : ''}`}
+  >
+    <Image src={logo} width={120} height={32} alt="Logo" className="m-2" />
+  </ScrollLink>
+
+  <div className="flex items-center">
+    <div className="ml-4">
+    {/* <Image src="/path/to/phone-icon.png" alt="Phone Icon" width={20} height={20} /> */}
+      <p>Contact Number</p>
+      <p>+91 123456789</p>
+    </div>
+
+    <div className="ml-2">
+    {/* <Image src="/path/to/email-icon.png" alt="Email Icon" width={20} height={20} /> */}
+      <p>Email Address</p>
+      <p>0rjZa@example.com</p>
+    </div>
+  </div>
+</div>
+
+      <div className='bg-yellow-500 rounded-full px-4 py-2 w-4/5 mx-auto'>
+      <nav className="flex justify-center gap-4 sm:gap-6 ">
         <div
           onMouseEnter={() => handleMouseEnter('insights')}
           onMouseLeave={handleMouseLeave}
@@ -146,7 +162,7 @@ const HeaderWithDropdown = () => {
 
         
       </nav>
-  
+      </div>
 
       <div className={`dropdown-container ${activeDropdown ? 'active' : ''}`}>
         {activeDropdown && <DropdownContent name={activeDropdown} />}
