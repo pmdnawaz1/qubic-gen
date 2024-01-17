@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import sendSym from "../../assets/partnership/send-01.png"
+import Image from 'next/image';
 export default function Footer() {
   const [email, setEmail] = useState('');
 
@@ -16,25 +18,25 @@ export default function Footer() {
   };
   return (
     <div className="relative">
-       <div className='flex justify-center gap-4 bg-[#062d42] rounded-full w-4/5 mx-auto absolute z-10 top-[-20px] left-0 right-0' >
-      <h4 className="text-xl text-white font-bold mb-4 ">Subscribe to Newsletter</h4>
-      <form onSubmit={handleSubmit} className="flex items-center">
+       <div className='flex justify-around w-3/4 mx-auto items-center gap-4 bg-[#062d42] rounded-full  h-20 absolute z-10 top-[-37px] left-0 right-0' >
+      <h4 className="ml-10 text-2xl text-white font-semibold ">Subscribe to Newsletter</h4>
+      <form onSubmit={handleSubmit} className="flex mr-10 items-center">
         <input
           type="email"
           placeholder="Your email"
           value={email}
           onChange={handleInputChange}
-          className="p-2 mr-2 border border-gray-300 rounded-full"
+          className="p-4 mr-2 border max-w-3xl w-[400px] bg-slate-300 border-gray-300 rounded-full"
           required
         />
-        <button type="submit" className="bg-yellow-500 text-white px-4 py-2 rounded-full">
-          Send Email
+        <button type="submit" className="bg-yellow-500 relative right-[80px] text-white px-4 py-2 rounded-full">
+          <Image src={sendSym} alt="sendSym" className='bg-transparent' />
         </button>
       </form>
     </div>
     <div className="bg-[#650e32] text-white relative z-0">
-      <div className="container mx-auto px-6 py-8">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="container mx-auto px-6  py-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 mt-20 gap-8">
           <div>
             <h2 className="text-2xl font-bold mb-2">QubicGen</h2>
             <p className="mb-4">Unlock Your Thoughts</p>
@@ -94,7 +96,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex justify-between items-center mt-8 border-t border-gray-700 pt-4">
+        <div className="flex flex-col gap-3 justify-between items-center mt-8 border-t border-gray-700 pt-4">
           <div className="flex items-center">
             <FacebookIcon className="text-white w-6 h-6" />
             <TwitterIcon className="text-white w-6 h-6 ml-4" />
