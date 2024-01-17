@@ -5,6 +5,8 @@ import Link  from "next/link"
 import logo from "../../public/images/logo.png"
 import Image from 'next/image';
 import './Header.css'
+import icon from "../../assets/partnership/icon.png"
+import iconMail from "../../assets/partnership/iconmail.png"
 
 // import { useState } from 'react';
 // import Image from 'next/image';
@@ -82,6 +84,19 @@ const HeaderWithDropdown = () => {
                 <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">click here</button>
               </div>
             )}
+            {name === 'consultancy' && (
+              <div>
+                <p>we are consultancy.</p>
+                <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">click here</button>
+              </div>
+            )}
+            {name === 'training' && (
+              <div>
+                <p>we give training.</p>
+                <button type="button" className="text-gray-900 bg-gradient-to-r from-red-200 via-red-300 to-yellow-200 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">click here</button>
+              </div>
+            )}
+      
             {name === 'contact' && (
               <div>
                 <p>Get in touch with us.</p>
@@ -96,7 +111,7 @@ const HeaderWithDropdown = () => {
   
   return (
     <div>
-<div className='flex items-center justify-between mx-20 mb-10'>
+<div className='flex items-center mt-10 justify-between mx-20 mb-10'>
 <ScrollLink
     to="home"
     spy={true}
@@ -111,16 +126,18 @@ const HeaderWithDropdown = () => {
   </ScrollLink>
 {/* contact div */}
   <div className="flex items-center">
-    <div className="ml-4">
+  <Image src={icon} alt='mobile icon' className='bg-customColor w-12 p-3 rounded-3xl text-customColor' />
+    <div className="ml-4 mr-2">
     {/* <Image src="/path/to/phone-icon.png" alt="Phone Icon" width={20} height={20} /> */}
-      <p>Contact Number</p>
-      <p>+91 123456789</p>
+      <p className='text-sm'>Contact Number</p>
+      <p className='font-bold '>+91 123456789</p>
     </div>
-
+    <Image src={iconMail} alt='Mail icon' className='bg-customColor w-12 p-3 rounded-3xl text-customColor' />
     <div className="ml-2">
+
     {/* <Image src="/path/to/email-icon.png" alt="Email Icon" width={20} height={20} /> */}
-      <p>Email Address</p>
-      <p>0rjZa@example.com</p>
+      <p className='text-sm'>Email Address</p>
+      <p className='font-bold'>0rjZa@example.com</p>
     </div>
   </div>
 </div>
@@ -128,8 +145,10 @@ const HeaderWithDropdown = () => {
 
      <div className="flex items-center relative top-[-20px] justify-between w-4/5 mx-auto">
      <div className='bg-yellow-500 rounded-full px-4 py-2 w-4/5 mx-auto'>
-      <nav className="flex justify-center gap-4 sm:gap-6 ">
-        <div
+      <nav className=" sm:gap-6 ">
+<div className='flex justify-between mx-4 items-center'>
+<div className='flex gap-6 '>
+<div
           onMouseEnter={() => handleMouseEnter('insights')}
           onMouseLeave={handleMouseLeave}
           className="relative"
@@ -139,6 +158,36 @@ const HeaderWithDropdown = () => {
     >
       Insights
     </Link>
+        </div>
+        <div
+          onMouseEnter={() => handleMouseEnter('consultancy')}
+          onMouseLeave={handleMouseLeave}
+          className="relative"
+        >
+         <select name="consultancy" className='bg-transparent text-sm' id="">
+         <option value="consultancy" >
+         <Link  href="/whatwedo"
+      className={`text-sm font-medium hover:underline underline-offset-4 cursor-pointer ${activeLink === 'consulting' ? 'active' : ''}`}
+    >
+      Consultancy
+    </Link>
+         </option>
+         </select>
+        </div>
+        <div
+          onMouseEnter={() => handleMouseEnter('training')}
+          onMouseLeave={handleMouseLeave}
+          className="relative"
+        >
+          <select name="training" id="" className='bg-transparent text-sm'>
+            <option value="">
+            <Link  href="/training"
+      className={`text-sm font-medium hover:underline underline-offset-4 cursor-pointer ${activeLink === 'training' ? 'active' : ''}`}
+    >
+      Training
+    </Link>
+            </option>
+          </select>
         </div>
   
         <div
@@ -161,14 +210,16 @@ const HeaderWithDropdown = () => {
          <Link  href="/services"
       className={`text-sm font-medium hover:underline underline-offset-4 cursor-pointer ${activeLink === 'services' ? 'active' : ''}`}
     >
-      Services
+      what we do
     </Link>
         </div>
+</div>
 
+        <div className='flex justify-end'>
         <div
           onMouseEnter={() => handleMouseEnter('contact')}
           onMouseLeave={handleMouseLeave}
-          className="relative"
+          className="relative bg-customColor px-3 py-2 text-white"
         >
           <Link  href="/contact"
       className={`text-sm font-medium hover:underline underline-offset-4 cursor-pointer ${activeLink === 'contact' ? 'active' : ''}`}
@@ -176,6 +227,8 @@ const HeaderWithDropdown = () => {
       Contact Us
     </Link>
         </div>
+        </div>
+</div>
 
         
       </nav>
