@@ -5,7 +5,7 @@ import Link  from "next/link"
 import logo from "../../public/images/logo.png"
 import Image from 'next/image';
 import './Header.css'
-import icon from "../../assets/partnership/icon.png"
+// import icon from "../../assets/partnership/icon.png"
 import iconMail from "../../assets/partnership/iconmail.png"
 
 // import { useState } from 'react';
@@ -126,7 +126,7 @@ const HeaderWithDropdown = () => {
   </ScrollLink>
 
   <div className="flex items-center">
-  <Image src={icon} alt='mobile icon' className='bg-customColor w-12 p-3 rounded-3xl text-customColor' />
+  {/* <Image src={icon} alt='mobile icon' className='bg-customColor w-12 p-3 rounded-3xl text-customColor' /> */}
     <div className="ml-4 mr-2">
     {/* <Image src="/path/to/phone-icon.png" alt="Phone Icon" width={20} height={20} /> */}
       <p className='text-sm'>Contact Number</p>
