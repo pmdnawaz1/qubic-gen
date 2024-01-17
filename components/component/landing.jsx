@@ -1,25 +1,14 @@
 'use client'
-import Link from "next/link"
-import { CardTitle, CardHeader, CardContent, Card, CardFooter } from "@/components/ui/card"
-// import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+import { CardContent, Card } from "@/components/ui/card"
 import { useState } from 'react';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import Header from '../component/Header';
 import OurServices from '../component/OurServices';
 import Footer from '../component/Footer';
-import Banner from './Banner';
-import Image from 'next/image';
-import mountain from '../../public/images/mountain.jpg';
-import ibm from "../../assets/partnership/ibm.png"
-import tesla from "../../assets/partnership/tesla.png"
-import sap from "../../assets/partnership/sap.png"
-import microsoft from "../../assets/partnership/microsoft.png"
-import aws from "../../assets/partnership/aws.png"
-import adobe from "../../assets/partnership/adobe.png"
 
 import './styles.css'
 import '../../app/globals.css'
+import Partnership from "./partnership";
 // import Banner from "./banner"
 
 export function Landing() {
@@ -123,76 +112,7 @@ export function Landing() {
 </div>
         <OurServices/>
 
-  
-        <section className="container bg-slate-100 mx-auto mt-14 mb-10 px-4 py-8">
-          <h2 className="text-2xl font-bold">Partnership & Alliances</h2>
-          <div className="h-2 w-24 bg-[#FFD700] mb-12" />
-          <div className="mr-20 flex  justify-between items-center mt-4">
-            <Image
-              alt="IBM"
-              height="100"
-              src={ibm}
-              // style={{
-              //   aspectRatio: "100/70",
-              //   objectFit: "cover",
-              // }}
-              width="150"
-            />
-            <Image
-              alt="Microsoft"
-              height="50"
-              src={microsoft}
-              // style={{
-              //   aspectRatio: "150/50",
-              //   objectFit: "cover",
-              // }}
-              width="150"
-            />
-            <Image
-              alt="SAP"
-              height="50"
-              src={sap}
-              // style={{
-              //   aspectRatio: "150/50",
-              //   objectFit: "cover",
-              // }}
-              width="150"
-            />
-            <Image
-              alt="Tesla"
-              height="50"
-              src={tesla}
-              // style={{
-              //   aspectRatio: "150/50",
-              //   objectFit: "cover",
-              // }}
-              width="150"
-            />
-            <Image
-              alt="aws"
-              height="50"
-              src={aws}
-              // style={{
-              //   aspectRatio: "150/50",
-              //   objectFit: "cover",
-              // }}
-              width="150"
-            />
-            <Image
-              alt="Adobe"
-              height="50"
-              src={adobe}
-              // style={{
-              //   aspectRatio: "150/50",
-              //   objectFit: "cover",
-              // }}
-              width="150"
-            />
-          </div>
-          <Link className="text-blue-600 hover:underline" href="#">
-            View all
-          </Link>
-        </section>
+        <Partnership/>
         <section className="container mb-5 mx-auto px-4 py-8">
           <div className="grid grid-cols-2 gap-4">
             <div>
