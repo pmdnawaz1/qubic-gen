@@ -11,6 +11,12 @@ import Footer from '../component/Footer';
 import Banner from './Banner';
 import Image from 'next/image';
 import mountain from '../../public/images/mountain.jpg';
+import ibm from "../../assets/partnership/ibm.png"
+import tesla from "../../assets/partnership/tesla.png"
+import sap from "../../assets/partnership/sap.png"
+import microsoft from "../../assets/partnership/microsoft.png"
+import aws from "../../assets/partnership/aws.png"
+import adobe from "../../assets/partnership/adobe.png"
 
 import './styles.css'
 import '../../app/globals.css'
@@ -116,58 +122,68 @@ export function Landing() {
   </div>
 </div>
   
-        <section className="container mx-auto px-4 py-8">
+        <section className="container bg-slate-100 mx-auto mt-14 px-4 py-8">
           <h2 className="text-2xl font-bold">Partnership & Alliances</h2>
-          <div className="h-2 w-24 bg-[#FFD700] mb-8" />
-          <div className="flex justify-between items-center mt-4">
+          <div className="h-2 w-24 bg-[#FFD700] mb-12" />
+          <div className="mr-20 flex  justify-between items-center mt-4">
             <Image
               alt="IBM"
-              height="50"
-              src="/placeholder.svg"
-              style={{
-                aspectRatio: "150/50",
-                objectFit: "cover",
-              }}
+              height="100"
+              src={ibm}
+              // style={{
+              //   aspectRatio: "100/70",
+              //   objectFit: "cover",
+              // }}
               width="150"
             />
             <Image
               alt="Microsoft"
               height="50"
-              src="/placeholder.svg"
-              style={{
-                aspectRatio: "150/50",
-                objectFit: "cover",
-              }}
+              src={microsoft}
+              // style={{
+              //   aspectRatio: "150/50",
+              //   objectFit: "cover",
+              // }}
               width="150"
             />
             <Image
               alt="SAP"
               height="50"
-              src="/placeholder.svg"
-              style={{
-                aspectRatio: "150/50",
-                objectFit: "cover",
-              }}
+              src={sap}
+              // style={{
+              //   aspectRatio: "150/50",
+              //   objectFit: "cover",
+              // }}
               width="150"
             />
             <Image
               alt="Tesla"
               height="50"
-              src="/placeholder.svg"
-              style={{
-                aspectRatio: "150/50",
-                objectFit: "cover",
-              }}
+              src={tesla}
+              // style={{
+              //   aspectRatio: "150/50",
+              //   objectFit: "cover",
+              // }}
+              width="150"
+            />
+            <Image
+              alt="aws"
+              height="50"
+              src={aws}
+              // style={{
+              //   aspectRatio: "150/50",
+              //   objectFit: "cover",
+              // }}
               width="150"
             />
             <Image
               alt="Adobe"
               height="50"
-              src="/placeholder.svg"
-              style={{
-                aspectRatio: "150/50",
-                objectFit: "cover",
-              }}
+              src={adobe}
+              // style={{
+              //   aspectRatio: "150/50",
+              //   objectFit: "cover",
+              // }}
               width="150"
             />
           </div>
