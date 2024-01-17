@@ -1,15 +1,25 @@
 'use client'
-import {  CardContent, Card } from "@/components/ui/card"
+import Link from "next/link"
+import { CardTitle, CardHeader, CardContent, Card, CardFooter } from "@/components/ui/card"
+// import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
 import { useState } from 'react';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import Header from '../component/Header';
 import OurServices from '../component/OurServices';
 import Footer from '../component/Footer';
+import Banner from './Banner';
 import Image from 'next/image';
+import mountain from '../../public/images/mountain.jpg';
+import ibm from "../../assets/partnership/ibm.png"
+import tesla from "../../assets/partnership/tesla.png"
+import sap from "../../assets/partnership/sap.png"
+import microsoft from "../../assets/partnership/microsoft.png"
+import aws from "../../assets/partnership/aws.png"
+import adobe from "../../assets/partnership/adobe.png"
 
 import './styles.css'
 import '../../app/globals.css'
-import Partnership from "./partnership";
 // import Banner from "./banner"
 
 export function Landing() {
@@ -60,24 +70,35 @@ export function Landing() {
 
   return (
     <>
+      <div className="relative">
       <Header/>
+      </div>
+        <section
+          className="bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/placeholder.svg')",
+          }}
+        >
+         {/*  */}
+        </section>
+        <div className="relative top-[-100px]">
         <section className="container mx-auto px-4 py-8">
-          <div className="grid grid-cols-3 gap-4">
-            <Card className="bg-[#F0F0F3] text-black">
+          <div className=" grid grid-cols-3 gap-5  px-10 w-full">
+            <Card className="bg-[#F0F0F3] py-4 w-2/3 h-48 text-black">
               <CardContent>
-                <BaselineIcon className="h-6 w-6" />
+                <BaselineIcon className="h-6 w-6 " />
                 <h3 className="font-bold">Reliable</h3>
                 <p>Reliable to be the voice of your business for the digital future.</p>
               </CardContent>
             </Card>
-            <Card className="bg-[#F0F0F3] text-black">
+            <Card className="bg-[#F0F0F3] py-4 w-2/3 h-48 text-black">
               <CardContent>
                 <XIcon className="h-6 w-6" />
                 <h3 className="font-bold">Experienced</h3>
                 <p>Experienced in-house team with an agile mindset.</p>
               </CardContent>
             </Card>
-            <Card className="bg-[#F0F0F3] text-black">
+            <Card className="bg-[#F0F0F3] py-4 w-2/3 h-48 text-black">
               <CardContent>
                 <CheckIcon className="h-6 w-6" />
                 <h3 className="font-bold">Compliance</h3>
@@ -86,23 +107,93 @@ export function Landing() {
             </Card>
           </div>
         </section>
-        <OurServices/>
-        <div className="bg-[#062d42] py-8">
-          <div className="container mx-auto px-4 flex">
-            <div className="w-full">
-              <h2 className="text-2xl font-bold text-white">Why QubicGen</h2>
-              <button className="text-white mt-4 bg-[#7b0032] hover:underline" variant="outline" href="#">
-                Get to know us more
-              </button>
-            </div>
-            <p className="text-white ml-12">
-              QubicGen, situated in the dynamic and thriving city of Anantapur, Andhra Pradesh, India, stands as a beacon of knowledge and a catalyst for success. Our mission is to bridge the gap between learning and achievement, fostering an environment where ideas flourish and ambitions are realized. With a focus on innovation and excellence, QubicGen empowers individuals to unlock their potential and contribute meaningfully to their communities. Here, tradition meets technology, creating a unique synergy that inspires....
-            </p>
-          </div>
         </div>
+        <div className="bg-[#062d42] md:-mt-10 py-8">
+  <div className="container  mx-auto px-4 flex">
+    <div className="w-full">
+      <h2 className="text-2xl font-bold text-white">Why QubicGen</h2>
+      <button className="text-white mt-4 bg-[#7b0032] hover:underline" variant="outline" href="#">
+        Get to know us more
+      </button>
+    </div>
+    <p className="text-white ml-12">
+      QubicGen, situated in the dynamic and thriving city of Anantapur, Andhra Pradesh, India, stands as a beacon of knowledge and a catalyst for success. Our mission is to bridge the gap between learning and achievement, fostering an environment where ideas flourish and ambitions are realized. With a focus on innovation and excellence, QubicGen empowers individuals to unlock their potential and contribute meaningfully to their communities. Here, tradition meets technology, creating a unique synergy that inspires....
+    </p>
+  </div>
+</div>
+        <OurServices/>
+
   
-        <Partnership/>
-        <section className="container mx-auto px-4 py-8">
+        <section className="container bg-slate-100 mx-auto mt-14 mb-10 px-4 py-8">
+          <h2 className="text-2xl font-bold">Partnership & Alliances</h2>
+          <div className="h-2 w-24 bg-[#FFD700] mb-12" />
+          <div className="mr-20 flex  justify-between items-center mt-4">
+            <Image
+              alt="IBM"
+              height="100"
+              src={ibm}
+              // style={{
+              //   aspectRatio: "100/70",
+              //   objectFit: "cover",
+              // }}
+              width="150"
+            />
+            <Image
+              alt="Microsoft"
+              height="50"
+              src={microsoft}
+              // style={{
+              //   aspectRatio: "150/50",
+              //   objectFit: "cover",
+              // }}
+              width="150"
+            />
+            <Image
+              alt="SAP"
+              height="50"
+              src={sap}
+              // style={{
+              //   aspectRatio: "150/50",
+              //   objectFit: "cover",
+              // }}
+              width="150"
+            />
+            <Image
+              alt="Tesla"
+              height="50"
+              src={tesla}
+              // style={{
+              //   aspectRatio: "150/50",
+              //   objectFit: "cover",
+              // }}
+              width="150"
+            />
+            <Image
+              alt="aws"
+              height="50"
+              src={aws}
+              // style={{
+              //   aspectRatio: "150/50",
+              //   objectFit: "cover",
+              // }}
+              width="150"
+            />
+            <Image
+              alt="Adobe"
+              height="50"
+              src={adobe}
+              // style={{
+              //   aspectRatio: "150/50",
+              //   objectFit: "cover",
+              // }}
+              width="150"
+            />
+          </div>
+          <Link className="text-blue-600 hover:underline" href="#">
+            View all
+          </Link>
+        </section>
+        <section className="container mb-5 mx-auto px-4 py-8">
           <div className="grid grid-cols-2 gap-4">
             <div>
               <h2 className="text-2xl font-bold">What people say about us</h2>
@@ -116,24 +207,23 @@ export function Landing() {
             <div>
               <h2 className="text-2xl font-bold">Our location</h2>
               <div className="h-2 w-24 bg-[#FFD700] mb-8" />
-              <Image
-                alt="Map"
-                className="mt-2"
-                height="200"
-                src="/placeholder.svg"
-                style={{
-                  aspectRatio: "300/200",
-                  objectFit: "cover",
-                }}
-                width="300"
-              />
+              <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4332.871311807345!2d77.6091169242712!3d14.647452316587293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb14b000140666b%3A0x8edcaad72813c8d8!2sQubicgen!5e0!3m2!1sen!2sin!4v1705479944621!5m2!1sen!2sin"
+              width="500"
+              height="300"
+              frameBorder="0"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              aria-hidden="false"
+              tabIndex="0"
+            />
             </div>
           </div>
         </section>
       
     
 
-        <Footer/>
+    <Footer/>
   </>);
 }
 function BaselineIcon(props) {

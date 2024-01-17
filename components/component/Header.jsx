@@ -96,9 +96,8 @@ const HeaderWithDropdown = () => {
   
   return (
     <div>
-    <div className="header-wrapper absolute z-20 w-full">
-     <div className="flex items-center justify-between w-4/5 mx-auto">
-  <ScrollLink
+<div className='flex items-center justify-between mx-20 mb-10'>
+<ScrollLink
     to="home"
     spy={true}
     smooth={true}
@@ -110,7 +109,7 @@ const HeaderWithDropdown = () => {
   >
     <Image src={logo} width={120} height={32} alt="Logo" className="m-2" />
   </ScrollLink>
-
+{/* contact div */}
   <div className="flex items-center">
     <div className="ml-4">
     {/* <Image src="/path/to/phone-icon.png" alt="Phone Icon" width={20} height={20} /> */}
@@ -125,8 +124,10 @@ const HeaderWithDropdown = () => {
     </div>
   </div>
 </div>
+    <div className="header-wrapper absolute z-20 w-full">
 
-      <div className='bg-yellow-500 rounded-full px-4 py-2 w-4/5 mx-auto'>
+     <div className="flex items-center relative top-[-20px] justify-between w-4/5 mx-auto">
+     <div className='bg-yellow-500 rounded-full px-4 py-2 w-4/5 mx-auto'>
       <nav className="flex justify-center gap-4 sm:gap-6 ">
         <div
           onMouseEnter={() => handleMouseEnter('insights')}
@@ -179,15 +180,19 @@ const HeaderWithDropdown = () => {
         
       </nav>
       </div>
+</div>
 
+<div className='flex flex-col'>
       <div className={`dropdown-container ${activeDropdown ? 'active' : ''}`}>
         {activeDropdown && <DropdownContent name={activeDropdown} />}
+      </div>
       </div>
   
       
     </div>
-    <div>
-      <div id="controls-carousel" className="relative w-full" data-carousel="static">
+    {/* carsouel */}
+    <div >
+      <div id="controls-carousel" className=" w-full" data-carousel="static">
     {/* Carousel wrapper */}
     <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
       {[1, 2, 3, 4, 5].map((index) => (
