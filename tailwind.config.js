@@ -6,6 +6,7 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -14,7 +15,9 @@ module.exports = {
       },
       backgroundColor: {
         'yellowBG': '#edb613',
+        'customColor':'#650E32',
       },
+
     },
   },
   plugins: [require("tailwindcss-animate")],
