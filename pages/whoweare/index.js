@@ -40,7 +40,7 @@ const WhoWeAreComponent = () => {
       </p>
 
       {/* Call to Action */}
-      <div className="mt-8 text-center">
+      <div className="-mt-10 text-center">
         <p className="text-lg leading-7 mb-6">
           Discover the QubicGen difference and join us on the journey of innovation and growth.
         </p>
