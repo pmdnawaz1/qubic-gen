@@ -6,7 +6,7 @@ import { useState } from "react";
 import Header from "../../components/component/Header";
 import Footer from "../../components/component/Footer";
 
-import icon from "../../assets/partnership/icon.png"
+// import icon from "../../assets/partnership/icon.png"
 import Image from "next/image";
 const Contact = () => {
   const [activeTab, setActiveTab] = useState('student');
