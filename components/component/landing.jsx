@@ -1,25 +1,15 @@
 'use client'
-import Link from "next/link"
-import { CardTitle, CardHeader, CardContent, Card, CardFooter } from "@/components/ui/card"
-// import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+import {  CardContent, Card } from "@/components/ui/card"
 import { useState } from 'react';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import Header from '../component/Header';
 import OurServices from '../component/OurServices';
 import Footer from '../component/Footer';
-import Banner from './Banner';
 import Image from 'next/image';
-import mountain from '../../public/images/mountain.jpg';
-import ibm from "../../assets/partnership/ibm.png"
-import tesla from "../../assets/partnership/tesla.png"
-import sap from "../../assets/partnership/sap.png"
-import microsoft from "../../assets/partnership/microsoft.png"
-import aws from "../../assets/partnership/aws.png"
-import adobe from "../../assets/partnership/adobe.png"
 
 import './styles.css'
 import '../../app/globals.css'
+import Partnership from "./partnership";
 // import Banner from "./banner"
 
 export function Landing() {
@@ -71,15 +61,6 @@ export function Landing() {
   return (
     <>
       <Header/>
-     
-        <section
-          className="bg-cover bg-center"
-          style={{
-            backgroundImage: "url('/placeholder.svg')",
-          }}
-        >
-         {/*  */}
-        </section>
         <section className="container mx-auto px-4 py-8">
           <div className="grid grid-cols-3 gap-4">
             <Card className="bg-[#F0F0F3] text-black">
@@ -107,88 +88,20 @@ export function Landing() {
         </section>
         <OurServices/>
         <div className="bg-[#062d42] py-8">
-  <div className="container mx-auto px-4 flex">
-    <div className="w-full">
-      <h2 className="text-2xl font-bold text-white">Why QubicGen</h2>
-      <button className="text-white mt-4 bg-[#7b0032] hover:underline" variant="outline" href="#">
-        Get to know us more
-      </button>
-    </div>
-    <p className="text-white ml-12">
-      QubicGen, situated in the dynamic and thriving city of Anantapur, Andhra Pradesh, India, stands as a beacon of knowledge and a catalyst for success. Our mission is to bridge the gap between learning and achievement, fostering an environment where ideas flourish and ambitions are realized. With a focus on innovation and excellence, QubicGen empowers individuals to unlock their potential and contribute meaningfully to their communities. Here, tradition meets technology, creating a unique synergy that inspires....
-    </p>
-  </div>
-</div>
-  
-        <section className="container bg-slate-100 mx-auto mt-14 px-4 py-8">
-          <h2 className="text-2xl font-bold">Partnership & Alliances</h2>
-          <div className="h-2 w-24 bg-[#FFD700] mb-12" />
-          <div className="mr-20 flex  justify-between items-center mt-4">
-            <Image
-              alt="IBM"
-              height="100"
-              src={ibm}
-              // style={{
-              //   aspectRatio: "100/70",
-              //   objectFit: "cover",
-              // }}
-              width="150"
-            />
-            <Image
-              alt="Microsoft"
-              height="50"
-              src={microsoft}
-              // style={{
-              //   aspectRatio: "150/50",
-              //   objectFit: "cover",
-              // }}
-              width="150"
-            />
-            <Image
-              alt="SAP"
-              height="50"
-              src={sap}
-              // style={{
-              //   aspectRatio: "150/50",
-              //   objectFit: "cover",
-              // }}
-              width="150"
-            />
-            <Image
-              alt="Tesla"
-              height="50"
-              src={tesla}
-              // style={{
-              //   aspectRatio: "150/50",
-              //   objectFit: "cover",
-              // }}
-              width="150"
-            />
-            <Image
-              alt="aws"
-              height="50"
-              src={aws}
-              // style={{
-              //   aspectRatio: "150/50",
-              //   objectFit: "cover",
-              // }}
-              width="150"
-            />
-            <Image
-              alt="Adobe"
-              height="50"
-              src={adobe}
-              // style={{
-              //   aspectRatio: "150/50",
-              //   objectFit: "cover",
-              // }}
-              width="150"
-            />
+          <div className="container mx-auto px-4 flex">
+            <div className="w-full">
+              <h2 className="text-2xl font-bold text-white">Why QubicGen</h2>
+              <button className="text-white mt-4 bg-[#7b0032] hover:underline" variant="outline" href="#">
+                Get to know us more
+              </button>
+            </div>
+            <p className="text-white ml-12">
+              QubicGen, situated in the dynamic and thriving city of Anantapur, Andhra Pradesh, India, stands as a beacon of knowledge and a catalyst for success. Our mission is to bridge the gap between learning and achievement, fostering an environment where ideas flourish and ambitions are realized. With a focus on innovation and excellence, QubicGen empowers individuals to unlock their potential and contribute meaningfully to their communities. Here, tradition meets technology, creating a unique synergy that inspires....
+            </p>
           </div>
-          <Link className="text-blue-600 hover:underline" href="#">
-            View all
-          </Link>
-        </section>
+        </div>
+  
+        <Partnership/>
         <section className="container mx-auto px-4 py-8">
           <div className="grid grid-cols-2 gap-4">
             <div>
@@ -220,7 +133,7 @@ export function Landing() {
       
     
 
-    <Footer/>
+        <Footer/>
   </>);
 }
 function BaselineIcon(props) {
