@@ -164,30 +164,24 @@ const HeaderWithDropdown = () => {
           onMouseLeave={handleMouseLeave}
           className="relative"
         >
-         <select name="consultancy" className='bg-transparent text-sm' id="">
-         <option value="consultancy" >
+        
          <Link  href="/whatwedo"
       className={`text-sm font-medium hover:underline underline-offset-4 cursor-pointer ${activeLink === 'consulting' ? 'active' : ''}`}
     >
       Consultancy
     </Link>
-         </option>
-         </select>
         </div>
         <div
           onMouseEnter={() => handleMouseEnter('training')}
           onMouseLeave={handleMouseLeave}
           className="relative"
         >
-          <select name="training" id="" className='bg-transparent text-sm'>
-            <option value="">
+          
             <Link  href="/training"
       className={`text-sm font-medium hover:underline underline-offset-4 cursor-pointer ${activeLink === 'training' ? 'active' : ''}`}
     >
       Training
     </Link>
-            </option>
-          </select>
         </div>
   
         <div
