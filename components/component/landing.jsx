@@ -203,17 +203,16 @@ export function Landing() {
             <div>
               <h2 className="text-2xl font-bold">Our location</h2>
               <div className="h-2 w-24 bg-[#FFD700] mb-8" />
-              <Image
-                alt="Map"
-                className="mt-2"
-                height="200"
-                src="/placeholder.svg"
-                style={{
-                  aspectRatio: "300/200",
-                  objectFit: "cover",
-                }}
-                width="300"
-              />
+              <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4332.871311807345!2d77.6091169242712!3d14.647452316587293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb14b000140666b%3A0x8edcaad72813c8d8!2sQubicgen!5e0!3m2!1sen!2sin!4v1705479944621!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              frameBorder="0"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              aria-hidden="false"
+              tabIndex="0"
+            />
             </div>
           </div>
         </section>
