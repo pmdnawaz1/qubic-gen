@@ -1,14 +1,14 @@
 'use client'
-import {  CardContent, Card } from "@/components/ui/card"
+import { CardContent, Card } from "@/components/ui/card"
 import { useState } from 'react';
 import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 import Header from '../component/Header';
 import OurServices from '../component/OurServices';
 import Footer from '../component/Footer';
-import Image from 'next/image';
 
 import './styles.css'
 import '../../app/globals.css'
+import Partnership from "./partnership";
 import Partnership from "./partnership";
 // import Banner from "./banner"
 
@@ -86,23 +86,24 @@ export function Landing() {
             </Card>
           </div>
         </section>
-        <OurServices/>
-        <div className="bg-[#062d42] py-8">
-          <div className="container mx-auto px-4 flex">
-            <div className="w-full">
-              <h2 className="text-2xl font-bold text-white">Why QubicGen</h2>
-              <button className="text-white mt-4 bg-[#7b0032] hover:underline" variant="outline" href="#">
-                Get to know us more
-              </button>
-            </div>
-            <p className="text-white ml-12">
-              QubicGen, situated in the dynamic and thriving city of Anantapur, Andhra Pradesh, India, stands as a beacon of knowledge and a catalyst for success. Our mission is to bridge the gap between learning and achievement, fostering an environment where ideas flourish and ambitions are realized. With a focus on innovation and excellence, QubicGen empowers individuals to unlock their potential and contribute meaningfully to their communities. Here, tradition meets technology, creating a unique synergy that inspires....
-            </p>
-          </div>
         </div>
-  
+        <div className="bg-[#062d42] md:-mt-10 py-8">
+  <div className="container  mx-auto px-4 flex">
+    <div className="w-full">
+      <h2 className="text-2xl font-bold text-white">Why QubicGen</h2>
+      <button className="text-white mt-4 bg-[#7b0032] hover:underline" variant="outline" href="#">
+        Get to know us more
+      </button>
+    </div>
+    <p className="text-white ml-12">
+      QubicGen, situated in the dynamic and thriving city of Anantapur, Andhra Pradesh, India, stands as a beacon of knowledge and a catalyst for success. Our mission is to bridge the gap between learning and achievement, fostering an environment where ideas flourish and ambitions are realized. With a focus on innovation and excellence, QubicGen empowers individuals to unlock their potential and contribute meaningfully to their communities. Here, tradition meets technology, creating a unique synergy that inspires....
+    </p>
+  </div>
+</div>
+        <OurServices/>
+
         <Partnership/>
-        <section className="container mx-auto px-4 py-8">
+        <section className="container mb-5 mx-auto px-4 py-8">
           <div className="grid grid-cols-2 gap-4">
             <div>
               <h2 className="text-2xl font-bold">What people say about us</h2>
