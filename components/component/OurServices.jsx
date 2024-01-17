@@ -7,39 +7,44 @@ import sql from "../../public/images/sql.jpg"
 import UI from "../../public/images/UI.jpg"
 import Net from "../../public/images/Net.jpg"
 import './OurServices.css'
-
+import img2 from "../../assets/partnership/img2.png"
+import img3 from "../../assets/partnership/img3.png"
+import img4 from "../../assets/partnership/img4.png"
+import img5 from "../../assets/partnership/img5.png"
+import img from "../../assets/partnership/img5.png"
+import img1 from "../../assets/partnership/img5.png"
 
 export default function Component() {
   const [isHovered, setIsHovered] = useState(Array(4).fill(false));
 
   const images = [
     {
-      src: RPA,
+      src: img2,
       alt: "RPA",
       title: "Cloud Accerleration",
     },
     {
-      src: sql,
+      src: img3,
       alt: "sql",
       title: "Data Modernization",
     },
     {
-      src: UI,
+      src: img4,
       alt: "UI",
       title: "Automation & Optimization",
     },
     {
-      src: Net,
+      src: img5,
       alt: "Net",
       title: "Digital Transformation",
     },
     {
-      src: Net,
+      src: img1,
       alt: "Net",
       title: "Quality Analysis & Testing",
     },
     {
-      src: Net,
+      src: img,
       alt: "Net",
       title: "Enterprise Application Integration",
     }
