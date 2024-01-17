@@ -62,8 +62,8 @@ export default function Component() {
   };
 
   return (
-    <div className=" text-white">
-      <div className="py-8 px-4 lg:px-8">
+    <div className=" text-white mt-10 ">
+      <div className="py-8  px-4 lg:px-8">
         <h2 className="text-3xl text-black font-bold mb-6">Discover the Qubic Gen Expertise</h2>
          <div className="h-2 w-24 bg-[#FFD700] mb-8" />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

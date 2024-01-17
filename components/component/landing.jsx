@@ -70,8 +70,9 @@ export function Landing() {
 
   return (
     <>
+      <div className="relative">
       <Header/>
-     
+      </div>
         <section
           className="bg-cover bg-center"
           style={{
@@ -80,23 +81,24 @@ export function Landing() {
         >
          {/*  */}
         </section>
+        <div className="relative top-[-100px]">
         <section className="container mx-auto px-4 py-8">
-          <div className="grid grid-cols-3 gap-4">
-            <Card className="bg-[#F0F0F3] text-black">
+          <div className=" grid grid-cols-3 gap-5  px-10 w-full">
+            <Card className="bg-[#F0F0F3] py-4 w-2/3 h-48 text-black">
               <CardContent>
-                <BaselineIcon className="h-6 w-6" />
+                <BaselineIcon className="h-6 w-6 " />
                 <h3 className="font-bold">Reliable</h3>
                 <p>Reliable to be the voice of your business for the digital future.</p>
               </CardContent>
             </Card>
-            <Card className="bg-[#F0F0F3] text-black">
+            <Card className="bg-[#F0F0F3] py-4 w-2/3 h-48 text-black">
               <CardContent>
                 <XIcon className="h-6 w-6" />
                 <h3 className="font-bold">Experienced</h3>
                 <p>Experienced in-house team with an agile mindset.</p>
               </CardContent>
             </Card>
-            <Card className="bg-[#F0F0F3] text-black">
+            <Card className="bg-[#F0F0F3] py-4 w-2/3 h-48 text-black">
               <CardContent>
                 <CheckIcon className="h-6 w-6" />
                 <h3 className="font-bold">Compliance</h3>
@@ -105,9 +107,9 @@ export function Landing() {
             </Card>
           </div>
         </section>
-        <OurServices/>
-        <div className="bg-[#062d42] py-8">
-  <div className="container mx-auto px-4 flex">
+        </div>
+        <div className="bg-[#062d42] md:-mt-10 py-8">
+  <div className="container  mx-auto px-4 flex">
     <div className="w-full">
       <h2 className="text-2xl font-bold text-white">Why QubicGen</h2>
       <button className="text-white mt-4 bg-[#7b0032] hover:underline" variant="outline" href="#">
@@ -119,6 +121,8 @@ export function Landing() {
     </p>
   </div>
 </div>
+        <OurServices/>
+
   
         <section className="container bg-slate-100 mx-auto mt-14 px-4 py-8">
           <h2 className="text-2xl font-bold">Partnership & Alliances</h2>
