@@ -1,7 +1,38 @@
-
+import { useState } from 'react';
 export default function Footer() {
+  const [email, setEmail] = useState('');
+
+  const handleInputChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    console.log(`Email submitted: ${email}`);
+
+    // Reset the email input
+    setEmail('');
+  };
   return (
-    <footer className="bg-[#650e32] text-white">
+    <div className="relative">
+       <div className='flex justify-center gap-4 bg-[#062d42] rounded-full w-4/5 mx-auto absolute z-10 top-[-20px] left-0 right-0' >
+      <h4 className="text-xl text-white font-bold mb-4 ">Subscribe to Newsletter</h4>
+      <form onSubmit={handleSubmit} className="flex items-center">
+        <input
+          type="email"
+          placeholder="Your email"
+          value={email}
+          onChange={handleInputChange}
+          className="p-2 mr-2 border border-gray-300 rounded-full"
+          required
+        />
+        <button type="submit" className="bg-yellow-500 text-white px-4 py-2 rounded-full">
+          Send Email
+        </button>
+      </form>
+    </div>
+    <div className="bg-[#650e32] text-white relative z-0">
       <div className="container mx-auto px-6 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
@@ -72,7 +103,8 @@ export default function Footer() {
           <p>© QubicGen | All Rights Reserved 2023</p>
         </div>
       </div>
-    </footer>
+    </div>
+    </div>
   )
 }
 

@@ -65,8 +65,6 @@ export function Landing() {
   return (
     <>
       <Header/>
-      {/* <Courosel/> */}
-      <Banner/>
      
         <section
           className="bg-cover bg-center"
