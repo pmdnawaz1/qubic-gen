@@ -1,4 +1,4 @@
-// pages/whoweare/index.js
+import Link from "next/link";
 import Image from "next/image";
 import "../../app/globals.css";
 import whoweare from "../../public/images/whoweare.png";
@@ -14,17 +14,21 @@ const WhoWeAre = () => {
   return (
     <div>
       <Header />
-      <div className="container mx-auto ">
+      <div className="container mx-auto">
         <Image src={whowearebanner} alt="QubicGen Banner" width={1900} height={500} />
-        <h1 className="text-2xl font-semibold mb-2">
-          <a href="/" className="hover:underline hover:text-yellow-500">
-            Home
-          </a>{" "}
-          <p className="inline text-yellow-500 px-2">&gt;</p> Who we are
-        </h1>
-        <div className="text-left my-8 flex flex-row">
-          <div className="flex flex-row">
-            <p className="text-gray-600 mb-6">
+
+        <div className="text-2xl font-semibold mb-2">
+          <p className="inline">
+            <Link href="/" className="hover:underline hover:text-yellow-500">
+              Home
+            </Link>
+            <span className="text-yellow-500 px-2">&gt;</span> Who we are
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 my-8">
+          <div className="text-gray-600 mb-6">
+            <p>
               QubicGen, situated in the dynamic and thriving city of Anantapur,
               Andhra Pradesh, India, stands as a beacon of knowledge and a
               catalyst for success. Our mission is to bridge the gap between
@@ -36,15 +40,9 @@ const WhoWeAre = () => {
               inspires...
             </p>
           </div>
-          <div className="flex flex-col m-2">
-            <div className="inline-block">
-              <Image
-                src={whoweare}
-                alt="QubicGen Logo"
-                width={1900}
-                height={700}
-              />
-            </div>
+
+          <div className="inline-block">
+            <Image src={whoweare} alt="QubicGen Logo" width={1900} height={700} />
           </div>
         </div>
 

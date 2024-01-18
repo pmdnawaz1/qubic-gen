@@ -1,3 +1,4 @@
+"use client";
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -213,7 +214,7 @@ function NavBar() {
                         className="relative"
                       >
                         <Link
-                          href="/whatwedo"
+                          href="/consulting"
                           className={`text-sm font-medium hover:underline underline-offset-4 cursor-pointer ${activeLink === "consulting" ? "active" : ""}`}
                         >
                           Consultancy
