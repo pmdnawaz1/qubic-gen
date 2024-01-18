@@ -29,25 +29,18 @@ const SecondCard = () => {
 
   return (
     <div className="bg-[#062d42] md:-mt-10 py-8 secondcard" data-aos="fade-up">
-      <div className="container mx-auto px-4 flex flex-col md:flex-row">
-        <div className="w-full md:w-1/2">
+      <div className="container mx-auto px-4 flex flex-col h-96 sm:h-48 md:flex-row">
+        <div className="w-full md:w-1/2 flex items-center">
           <h2 className="text-2xl font-bold text-white">Why QubicGen</h2>
           <button
-            className="flex items-center text-white mt-4 bg-[#7b0032] p-3.5 hover:underline"
+            className=" items-center text-white bg-[#7b0032] h-15 m-5 p-4  hover:underline"
             variant="outline"
             href="#"
           >
-            Get to know us more
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-6 w-6 ml-2"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-            </svg>
+            Get to know us more &gt;
+            
           </button>
+          
         </div>
         <p className="text-white mt-4 md:ml-12 md:w-1/2">
         {displayText}

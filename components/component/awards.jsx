@@ -12,15 +12,18 @@ import './Partnership.css'
 export default function Awards() {
   return (
     <section className="container bg-slate-100 mx-auto mt-14 px-4 py-8">
-     <div className='flex justify-end flex-col'>
+     <div className='flex justify-center items-center'>
+      <div className='flex flex-col'>
      <h2 className="text-2xl font-bold">Awards</h2>
+     <div className="h-2 w-12 bg-[#FFD700]" />
+     </div>
      <button
-            className="flex items-center text-black hover:bg-[#7b0032] mt-4 bg-[#ffffff] p-3.5 hover:underline"
+            className=" ml-auto"
             variant="outline"
             href="#"
           >
-            View more
-            <svg
+            View more &gt;
+            {/* <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6 ml-2"
               fill="none"
@@ -28,11 +31,10 @@ export default function Awards() {
               stroke="currentColor"
             >
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
-            </svg>
+            </svg> */}
           </button>
       
      </div>
-      <div className="h-2 w-24 bg-[#FFD700] mb-12" />
       <div className="flex justify-between items-center mt-4 overflow-hidden">
         <div className="flex space-x-4 justify-between animate-scroll">
           <div className="flex space-x-4">

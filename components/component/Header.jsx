@@ -305,7 +305,7 @@ const HeaderWithDropdown = () => {
             </div>
           </div>
 
-                    <div className="relative top-[-100px] firstcard">
+                    <div className="relative top-[-100px] firstcard ">
             <motion.section
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -319,7 +319,7 @@ const HeaderWithDropdown = () => {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   className="bg-[#F0F0F3] py-4 text-black flex flex-col items-center md:items-start"
                 >
-                  <div className="text-center md:text-left">
+                  <div className="text-center p-5 md:text-left">
                     <BaselineIcon className="h-6 w-6" />
                     <h3 className="font-bold">Reliable</h3>
                     <p>Reliable to be the voice of your business for the digital future.</p>
@@ -331,7 +331,7 @@ const HeaderWithDropdown = () => {
                   transition={{ duration: 0.5, delay: 0.5 }}
                   className="bg-[#F0F0F3] py-4 text-black flex flex-col items-center md:items-start"
                 >
-                  <div className="text-center md:text-left">
+                  <div className="text-center p-5 md:text-left">
                     <XIcon className="h-6 w-6" />
                     <h3 className="font-bold">Experienced</h3>
                     <p>Experienced in-house team with an agile mindset.</p>
@@ -343,7 +343,7 @@ const HeaderWithDropdown = () => {
                   transition={{ duration: 0.5, delay: 0.7 }}
                   className="bg-[#F0F0F3] py-4 text-black flex flex-col items-center md:items-start"
                 >
-                  <div className="text-center md:text-left">
+                  <div className="text-center p-5 md:text-left">
                     <CheckIcon className="h-6 w-6" />
                     <h3 className="font-bold">Compliance</h3>
                     <p>Compliance to enable digital transformation with ease.</p>
