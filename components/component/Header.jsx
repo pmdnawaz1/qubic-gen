@@ -12,6 +12,7 @@ import mountain from "../../public/images/mountain.jpg";
 import sea from "../../public/images/sea.jpg";
 
 import { motion } from "framer-motion";
+import NavBar from "./Navbar";
 
 const HeaderWithDropdown = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -157,19 +158,9 @@ const HeaderWithDropdown = () => {
 
   return (
     <div>
-      {isMobile ? (
-        <div className="mobile-header">
-          <div className="mobile-carousel">{/* Carousel code here */}</div>
 
-          {/* Third Line (Reliable, Experienced, etc. Boxes) */}
-          <div className="mobile-reliability">
-            {/* Reliable, Experienced, etc. boxes code here */}
-            {/* ... */}
-          </div>
-        </div>
-      ) : (
         <div>
-          <div className="flex items-center mt-10 justify-between mx-20 mb-10">
+          <div className=" relative sm:mt-10  sm:flex items-center -mt-10 justify-between mx-20 mb-10">
             <ScrollLink
               to="home"
               spy={true}
@@ -178,7 +169,7 @@ const HeaderWithDropdown = () => {
               duration={800}
               onSetActive={handleSetActive}
               onClick={() => handleScrollTo("home")}
-              className={`text-sm font-medium hover:underline underline-offset-4 cursor-pointer ${activeLink === "home" ? "active" : ""}`}
+              className={`text-sm hidden sm:flex font-medium hover:underline underline-offset-4 cursor-pointer ${activeLink === "home" ? "active" : ""}`}
             >
               <Image
                 src={logo}
@@ -189,11 +180,11 @@ const HeaderWithDropdown = () => {
               />
             </ScrollLink>
             {/* contact div */}
-            <div className="flex items-center">
+            <div className="hidden sm:flex items-center">
               <Image
                 src={phoneicon}
                 alt="mobile icon"
-                className="bg-customColor w-12 p-3 rounded-3xl text-customColor"
+                className="bg-customColor  w-12 p-3 rounded-3xl text-customColor"
               />
               <div className="ml-4 mr-2">
                 {/* <Image src="/path/to/phone-icon.png" alt="Phone Icon" width={20} height={20} /> */}
@@ -212,112 +203,19 @@ const HeaderWithDropdown = () => {
               </div>
             </div>
           </div>
-          <div className="header-wrapper absolute z-20 w-full">
-            <div className="flex items-center relative top-[-20px] justify-between w-4/5 mx-auto">
-              <div className="bg-yellow-500 rounded-full px-4 py-2 w-4/5 mx-auto">
-                <nav className=" sm:gap-6 ">
-                  <div className="flex justify-between mx-4 items-center">
-                    <div className="flex gap-6 ">
-                      <div
-                        onMouseEnter={() => handleMouseEnter("insights")}
-                        onMouseLeave={handleMouseLeave}
-                        className="relative"
-                      >
-                        <Link
-                          href="/insights"
-                          className={`text-sm font-medium hover:underline underline-offset-4 cursor-pointer ${activeLink === "insights" ? "active" : ""}`}
-                        >
-                          Insights
-                        </Link>
-                      </div>
-                      <div
-                        onMouseEnter={() => handleMouseEnter("consultancy")}
-                        onMouseLeave={handleMouseLeave}
-                        className="relative"
-                      >
-                        <Link
-                          href="/whatwedo"
-                          className={`text-sm font-medium hover:underline underline-offset-4 cursor-pointer ${activeLink === "consulting" ? "active" : ""}`}
-                        >
-                          Consultancy
-                        </Link>
-                      </div>
-                      <div
-                        onMouseEnter={() => handleMouseEnter("training")}
-                        onMouseLeave={handleMouseLeave}
-                        className="relative"
-                      >
-                        <Link
-                          href="/training"
-                          className={`text-sm font-medium hover:underline underline-offset-4 cursor-pointer ${activeLink === "training" ? "active" : ""}`}
-                        >
-                          Training
-                        </Link>
-                      </div>
-
-                      <div
-                        onMouseEnter={() => handleMouseEnter("whoweare")}
-                        onMouseLeave={handleMouseLeave}
-                        className="relative"
-                      >
-                        <Link
-                          href="/whoweare"
-                          className={`text-sm font-medium hover:underline underline-offset-4 cursor-pointer ${activeLink === "whoweare" ? "active" : ""}`}
-                        >
-                          Who we are
-                        </Link>
-                      </div>
-
-                      <div
-                        onMouseEnter={() => handleMouseEnter("services")}
-                        onMouseLeave={handleMouseLeave}
-                        className="relative"
-                      >
-                        <Link
-                          href="/services"
-                          className={`text-sm font-medium hover:underline underline-offset-4 cursor-pointer ${activeLink === "services" ? "active" : ""}`}
-                        >
-                          what we do
-                        </Link>
-                      </div>
-                    </div>
-
-                    <div className="flex justify-end">
-                      <div
-                        onMouseEnter={() => handleMouseEnter("contact")}
-                        onMouseLeave={handleMouseLeave}
-                        className="relative bg-customColor px-3 py-2 text-white"
-                      >
-                        <Link
-                          href="/contact"
-                          className={`text-sm font-medium hover:underline underline-offset-4 cursor-pointer ${activeLink === "contact" ? "active" : ""}`}
-                        >
-                          Contact Us
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </nav>
-              </div>
-            </div>
-
-            <div className="flex flex-col">
-              <div
-                className={`dropdown-container ${activeDropdown ? "active" : ""}`}
-              >
-                {activeDropdown && <DropdownContent name={activeDropdown} />}
-              </div>
-            </div>
+          <div className="relative  sm:-mt-10 sm:top-10 sm:z-10">
+          <NavBar />
           </div>
           {/* carsouel */}
           <div>
             <div
+
               id="controls-carousel"
-              className=" w-full"
+              className=" w-full "
               data-carousel="static"
             >
               {/* Carousel wrapper */}
-              <div className="relative h-56 overflow-hidden rounded-lg md:h-96">
+              <div className="relative mt-5 h-56 sm:mt-0 overflow-hidden rounded-lg md:h-96">
                 {[1, 2, 3, 4, 5].map((index) => (
                   <div
                     key={index}
@@ -357,7 +255,7 @@ const HeaderWithDropdown = () => {
               <button
                 type="button"
                 onClick={handlePrevClick}
-                className="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                className="absolute top-0 start-0 z-30 hidden  sm:flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
                 data-carousel-prev
               >
                 <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
@@ -382,7 +280,7 @@ const HeaderWithDropdown = () => {
               <button
                 type="button"
                 onClick={handleNextClick}
-                className="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+                className="absolute hidden top-0 end-0 z-30 sm:flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
                 data-carousel-next
               >
                 <span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
@@ -456,7 +354,6 @@ const HeaderWithDropdown = () => {
           </div>
 
         </div>
-      )}
       {/* Rest of your component code... */}
     </div>
   );
