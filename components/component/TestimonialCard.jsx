@@ -1,3 +1,4 @@
+"use client";
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import tesla from '../../assets/partnership/tesla.png';
@@ -61,10 +62,10 @@ const TestimonialsSection = () => {
                 >
                   <Image
                     src={testimonial.image}
-                    alt={`Testimonial ${testimonial.id}`}
-                    layout="fill"
-                    objectFit="cover"
+                    alt="Tesla"
+                    style={{ objectFit: 'cover', objectPosition: 'top center' }}
                   />
+
                 </div>
 
                 <div className="flex gap-0.5 text-green-500">

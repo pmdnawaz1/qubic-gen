@@ -1,3 +1,4 @@
+"use client"
 import { useState } from 'react';
 import sendSym from "../../assets/partnership/send-01.png"
 import Image from 'next/image';
