@@ -81,5 +81,25 @@ export function Landing() {
       <Footer />
     </div>
   );
+    <div>
+      <div className="relative">
+        <Header />
+
+      </div>
+      <section
+        className="bg-cover bg-center"
+        style={{
+          backgroundImage: "url('/placeholder.svg')",
+        }}
+      >
+      </section>
+
+      <SecondCard/>
+      <OurServices />
+      <Partnership />
+      <TestimonialCard/>
+      <Footer />
+    </div>
+  );
 }
 export default Landing;

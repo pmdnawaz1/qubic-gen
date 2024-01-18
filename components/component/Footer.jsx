@@ -95,6 +95,18 @@ export default function Footer() {
               <div className="w-full bg-gray-300 h-24" />
             </div>
           </div>
+          <div className="responsive-iframe-container">
+          <h3 className="text-xl font-semibold mb-2">Our Location</h3>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4332.871311807345!2d77.6091169242712!3d14.647452316587293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bb14b000140666b%3A0x8edcaad72813c8d8!2sQubicgen!5e0!3m2!1sen!2sin!4v1705479944621!5m2!1sen!2sin"
+                width="100%"
+                height="300"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                aria-hidden="false"
+                tabIndex="0"
+              />
+            </div>
         </div>
         <div className="flex flex-col gap-3 justify-between items-center mt-8 border-t border-gray-700 pt-4">
           <div className="flex items-center">
@@ -105,7 +117,7 @@ export default function Footer() {
           <p>© QubicGen | All Rights Reserved 2023</p>
         </div>
       </div>
-    </div>
+      </div>
     </div>
   )
 }
