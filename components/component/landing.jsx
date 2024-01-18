@@ -10,6 +10,7 @@ import TestimonialCard from "../component/TestimonialCard";
 import "./styles.css";
 import "../../app/globals.css";
 import Partnership from "./partnership";
+import NavBar from "./Navbar";
 // import Banner from "./banner"
 
 export function Landing() {
@@ -51,6 +52,7 @@ export function Landing() {
     <div>
       <div className="relative">
         <Header />
+
       </div>
       <section
         className="bg-cover bg-center"
