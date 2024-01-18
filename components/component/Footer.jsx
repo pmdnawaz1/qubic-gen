@@ -21,19 +21,26 @@ export default function Footer() {
        <div className='flex mt-5 sm:mt-5 py-8 sm:grid sm:grid-cols-2   sm:py-0 sm: w-full sm:w-3/4 sm:mx-auto items-center sm:gap-0 bg-[#062d42] rounded-none sm:rounded-full  h-20 sm:absolute sm:z-10 sm:top-[-37px] sm:left-0 sm:right-0' >
       <h4 className=" sm:text-2xl w-full text-center mr-5 sm:mr-0 sm:ml-10 sm:max-w-fit sm:w-full text-white font-semibold ">Subscribe to Newsletter</h4>
       <form onSubmit={handleSubmit} className="flex items-center sm:ml-0 sm:mr-0 ml-10">
+    <div className="absolute sm:relative w-full max-w-fit sm:w-full">
+       <div className='flex mt-5 sm:mt-5 py-8 sm:grid sm:grid-cols-2   sm:py-0 sm: w-full sm:w-3/4 sm:mx-auto items-center sm:gap-0 bg-[#062d42] rounded-none sm:rounded-full  h-20 sm:absolute sm:z-10 sm:top-[-37px] sm:left-0 sm:right-0' >
+      <h4 className=" sm:text-2xl w-full text-center mr-5 sm:mr-0 sm:ml-10 sm:max-w-fit sm:w-full text-white font-semibold ">Subscribe to Newsletter</h4>
+      <form onSubmit={handleSubmit} className="flex items-center sm:ml-0 sm:mr-0 ml-10">
         <input
           type="email"
           placeholder="Your email"
           value={email}
           onChange={handleInputChange}
           className="p-2 sm:ml-0 sm:top-[80px] w-[300px] sm:max-w-3xl sm:w-[400px] bg-slate-300 border-gray-300 rounded-full"
+          className="p-2 sm:ml-0 sm:top-[80px] w-[300px] sm:max-w-3xl sm:w-[400px] bg-slate-300 border-gray-300 rounded-full"
           required
         />
+        <button type="submit" className="bg-yellow-500 sm:right-[58x] right-[55px] relative text-white px-4 py-2 rounded-full">
         <button type="submit" className="bg-yellow-500 sm:right-[58x] right-[55px] relative text-white px-4 py-2 rounded-full">
           <Image src={sendSym} alt="sendSym" className='bg-transparent' />
         </button>
       </form>
     </div>
+    <div className="bg-[#650e32] text-white sm:top-[20px] absolute  sm:relative sm:mt-10 mt-5 ">
     <div className="bg-[#650e32] text-white sm:top-[20px] absolute  sm:relative sm:mt-10 mt-5 ">
       <div className="container mx-auto px-6  py-8">
         <div className="grid grid-cols-1 md:grid-cols-4 mt-20 gap-8">
