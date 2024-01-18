@@ -5,7 +5,7 @@ import whoweare from "../../public/images/whoweare.png";
 import whowearebanner from "../../public/images/whowearebanner.png";
 import Header from "../../components/component/Header";
 import Footer from "@/components/component/Footer";
-import Awards from "@/components/component/Awards";
+import Awards from "../../components/component/awards";
 import tesla from "../../public/images/whoweare.png";
 
 
