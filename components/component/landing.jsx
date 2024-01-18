@@ -1,4 +1,4 @@
-import NavBar from "../component/NavBar";
+import NavBar from "../component/Navbar";
 import OurServices from "../component/OurServices";
 import Footer from "../component/Footer";
 import SecondCard from "../component/SecondCard";
