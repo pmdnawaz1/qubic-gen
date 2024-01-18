@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
 import Header from "../component/Header";
 import OurServices from "../component/OurServices";
 import Footer from "../component/Footer";
@@ -49,17 +48,7 @@ export function Landing() {
 
   return (
     <div>
-      <div className="relative">
-        <Header />
-      </div>
-      <section
-        className="bg-cover bg-center"
-        style={{
-          backgroundImage: "url('/placeholder.svg')",
-        }}
-      >
-      </section>
-
+      <Header />    
       <SecondCard/>
       <OurServices />
       <Partnership />
