@@ -88,8 +88,7 @@ const ServicesComponent = () => {
             className="relative overflow-hidden"
             data-aos="fade-up"
           >
-            {/* Apply shadow to the outer container */}
-            <div className="bg-white p-6 rounded-md shadow-md hover:shadow-lg">
+            <div className="bg-slate-200 p-6 rounded-md shadow-md hover:shadow-lg">
               <div className="mb-4 h-24 relative">
                 <Image
                   src={service.imagePath}

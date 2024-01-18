@@ -13,7 +13,7 @@ const Contact = () => {
   return (
     <>
     <Header/>
-      <section className="relative z-10 mx-10 px-5 overflow-hidden bg-white py-20 dark:bg-dark lg:py-[120px]">
+      <section className="relative z-10 m-10 px-5 overflow-hidden bg-white py-20 dark:bg-dark lg:py-[120px]">
         
         <div className="container">
           <div className="-mx-4 flex flex-wrap lg:justify-between">

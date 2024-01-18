@@ -3,6 +3,7 @@ import OurServices from "../component/OurServices";
 import Footer from "../component/Footer";
 import SecondCard from "../component/SecondCard";
 import TestimonialCard from "../component/TestimonialCard";
+import SpeedDial from "../component/SpeedDail";
 
 import Courosel from "../component/Header/Courosel";
 import HeaderCards from "../component/Header/HeaderCards";
@@ -19,7 +20,7 @@ export function Landing() {
         <div className="relative  sm:-mt-10 sm:top-10 sm:z-10">
           <NavBar />
         </div>
-      
+        <SpeedDial/>
         <Courosel/>
         <HeaderCards/>    
       <SecondCard/>
