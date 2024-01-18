@@ -236,7 +236,7 @@ const HeaderWithDropdown = () => {
                         className="relative"
                       >
                         <Link
-                          href="/whatwedo"
+                          href="/consulting"
                           className={`text-sm font-medium hover:underline underline-offset-4 cursor-pointer ${activeLink === "consulting" ? "active" : ""}`}
                         >
                           Consultancy
