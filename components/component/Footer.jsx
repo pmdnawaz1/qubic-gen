@@ -19,19 +19,21 @@ export default function Footer() {
   };
   return (
     <div className="absolute sm:relative w-full sm:w-full">
-       <div className='flex mt-5 sm:mt-5 py-8 sm:grid sm:grid-cols-2   sm:py-0 sm: w-full sm:w-3/4 sm:mx-auto items-center sm:gap-0 bg-[#062d42] rounded-none sm:rounded-full  h-20 sm:absolute sm:z-10 sm:top-[-37px] sm:left-0 sm:right-0' >
-      <h4 className=" sm:text-2xl text-sm w-full text-center mr-5 sm:mr-0 sm:ml-10 sm:max-w-fit sm:w-full text-white font-semibold ">Subscribe to Newsletter</h4>
-      <form onSubmit={handleSubmit} className="flex items-center sm:ml-0 sm:mr-0 ml-10">
+       <div className=' mt-5 flex  justify-between   py-8 sm:grid sm:grid-cols-2 sm:py-0 sm:w-3/4 sm:mx-auto items-center sm:gap-0 bg-[#062d42] rounded-none sm:rounded-full  h-20 sm:absolute sm:z-10 sm:top-[-37px] sm:left-0 sm:right-0' >
+      <h4 className=" sm:text-2xl ml-10 text-xl text-center mr-5 sm:mr-0 sm:ml-10 sm:max-w-fit sm:w-full text-white font-semibold ">Subscribe <span className='hidden sm:inline'>to Newsletter</span></h4>
+      <form onSubmit={handleSubmit} className="flex  items-center sm:ml-0 sm:mr-0">
+        <div className='-ml-10'>
         <input
           type="email"
           placeholder="Your email"
           value={email}
           onChange={handleInputChange}
-          className="p-2 sm:ml-0 sm:top-[80px] w-[300px] sm:max-w-3xl sm:w-[400px] bg-slate-300 border-gray-300 rounded-full"
+          className="p-3 sm:ml-0 sm:top-[80px] max-w-48 w-max sm:max-w-3xl sm:w-[400px] bg-slate-300 border-gray-300 rounded-2xl sm:rounded-full"
           required
         />
-        <button type="submit" className="bg-yellow-500 sm:right-[58x] right-[55px] relative text-white px-4 py-2 rounded-full">
-          <Image src={sendSym} alt="sendSym" className='bg-transparent' />
+        </div>
+        <button type="submit" className="bg-yellow-500 sm:right-[62px] right-[49px]  sm:inline relative text-white rounded-2xl px-3 py-3 sm:px-5 sm:py-3 sm:rounded-full">
+          <Image src={sendSym}  alt="sendSym" className=' bg-transparent' />
         </button>
       </form>
     </div>

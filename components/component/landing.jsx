@@ -21,13 +21,13 @@ export function Landing() {
           <NavBar />
         </div>
         <SpeedDial/>
-        <Courosel/>
+        <Courosel/> 
         <HeaderCards/>    
       <SecondCard/>
       <OurServices />
       <Partnership />
       <TestimonialCard/>
-      <Footer />
+      <Footer />  
     </div>
   );
 }
