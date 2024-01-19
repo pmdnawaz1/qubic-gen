@@ -10,7 +10,7 @@ import strategyImage from "../../public/images/mountain.jpg";
 import transformationImage from "../../public/images/mountain.jpg";
 import whoweare from "../../public/images/mountain.jpg";
 
-const CaseStudyCard = ({ title, description, image }) => {
+const CourseCard = ({ title, description, image }) => {
   return (
     <div className="w-full md:w-1/2 lg:w-1/3 p-4 bg-slate-200">
       <div className="bg-white p-6 rounded-md shadow-md">
@@ -39,9 +39,9 @@ const Consulting = () => {
           height={500}
         />
         <div className="text-center mt-8">
-          <h1 className="text-4xl font-bold mb-4">Strategic Consulting Services</h1>
+          <h1 className="text-4xl font-bold mb-4">Training</h1>
           <p className="text-gray-600">
-            Elevate your business with our tailored consulting solutions.
+            Elevate your talent with our tailored training solutions.
           </p>
         </div>
 
@@ -78,38 +78,44 @@ const Consulting = () => {
         {/* Consulting Content Section */}
         <div className="text-left my-8">
           <p className="text-gray-600 mb-6">
-            {/* Add relevant and engaging consulting content here */}
-            {/* Use paragraphs and formatting as needed */}
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry&apos;s standard dummy
-            text ever since the 1500s, when an unknown printer took a galley of
-            type and scrambled it to make a type specimen book. It has survived
-            not only five centuries, but also the leap into electronic
-            typesetting, remaining essentially unchanged. It was popularised in
-            the 1960s with the release of Letraset sheets containing Lorem Ipsum
-            passages, and more recently with desktop publishing software like
-            Aldus PageMaker including versions of Lorem Ipsum.
+           Our training programs are designed to help students achieve success.
+           
           </p>
         </div>
 
         {/* Case Studies Section */}
         <div className="my-8">
-          <h2 className="text-2xl font-bold mb-4">Explore Our Case Studies</h2>
+          <h2 className="text-2xl font-bold mb-4">Explore Our Courses</h2>
           <div className="flex flex-wrap justify-around">
-            {/* Utilize a CaseStudyCard component for each case study */}
-            <CaseStudyCard
-              title="Revolutionizing Collaboration"
-              description="Discover how our collaboration strategies transformed businesses."
+            {/* Utilize a CourseCard component for each case study */}
+            <CourseCard
+              title="Rpa Development"
+              description="Learn how our Rpa development services helped businesses achieve success."
               image={whoweare}
             />
-            <CaseStudyCard
-              title="Innovative Solutions for Success"
-              description="Explore our innovative approaches that led to remarkable success."
+            <CourseCard
+              title="UI Path Development"
+              description="Discover how our UI Path development services helped businesses achieve success."
               image={whoweare}
             />
-            <CaseStudyCard
-              title="Strategic Business Growth"
-              description="Learn about our strategies that contributed to significant business growth."
+            <CourseCard
+              title="Web Development"
+              description="Explore our web development services to help businesses achieve success."
+              image={whoweare}
+            />
+            <CourseCard
+              title="Mobile Development"
+              description="Explore our mobile development services to help businesses achieve success."
+              image={whoweare}
+            />
+            <CourseCard
+              title="Software Development"
+              description="Unlock the full potential of our software development services."
+              image={whoweare}
+            />
+            <CourseCard
+              title="Data Engineering"
+              description="Discover how our data engineering services helped businesses achieve success."
               image={whoweare}
             />
           </div>

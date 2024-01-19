@@ -5,6 +5,7 @@ import whoweare from "../../public/images/whoweare.png";
 import whowearebanner from "../../public/images/whowearebanner.png";
 import Header from "../../components/component/Header";
 import Footer from "@/components/component/Footer";
+import About from "@/components/component/About";
 import Awards from "../../components/component/awards";
 import bulb from "../../public/images/bulb.png";
 import target from "../../public/images/target.png";
@@ -14,38 +15,9 @@ const WhoWeAre = () => {
   return (
     <div>
       <Header />
-      <div className="container mx-auto">
+      <div className="container mx-auto">    
         <Image src={whowearebanner} alt="QubicGen Banner" width={1900} height={500} />
-
-        <div className="text-2xl font-semibold mb-2">
-          <p className="inline">
-            <Link href="/" className="hover:underline hover:text-yellow-500">
-              Home
-            </Link>
-            <span className="text-yellow-500 px-2">&gt;</span> Who we are
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 my-8">
-          <div className="text-gray-600 mb-6">
-            <p>
-              QubicGen, situated in the dynamic and thriving city of Anantapur,
-              Andhra Pradesh, India, stands as a beacon of knowledge and a
-              catalyst for success. Our mission is to bridge the gap between
-              learning and achievement, fostering an environment where ideas
-              flourish and ambitions are realized. With a focus on innovation
-              and excellence, QubicGen empowers individuals to unlock their
-              potential and contribute meaningfully to their communities. Here,
-              tradition meets technology, creating a unique synergy that
-              inspires...
-            </p>
-          </div>
-
-          <div className="inline-block">
-            <Image src={whoweare} alt="QubicGen Logo" width={1900} height={700} />
-          </div>
-        </div>
-
+        <About />
         <div className="flex justify-center items-center space-x-4 my-8 bg-slate-100">
           <div className="flex flex-col items-center p-8">
            <div className="h-40 w-40 bg-white">

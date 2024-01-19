@@ -2,15 +2,29 @@ import Image from "next/image";
 import "../../app/globals.css";
 import Header from "../../components/component/Header";
 import Footer from "../../components/component/Footer";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+
+import { useEffect } from "react";
 
 
 export default function InsightsComponent() {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: false,
+    });
+    AOS.refresh();
+  })
   return (
     <>
     <Header/>
-    <div className="flex flex-wrap gap-6 items-center justify-center p-8">
+    <div className="flex flex-wrap gap-6 items-center justify-center p-8 mx-auto" data-aos="fade-up">
       <div className="max-w-screen-md mx-auto p-8">
-      <h2 className="text-4xl font-bold mb-4">About QubicGen</h2>
+      <h2 className="text-4xl font-bold mb-4">Insights of QubicGen</h2>
       <p className="text-lg leading-7 mb-6">
         QubicGen is a leading IT consulting and training company based in Ananthapur, India. With a strong focus on innovation and technology, we empower businesses to achieve their goals and stay ahead in today&apos;s dynamic digital landscape.
       </p>
@@ -23,11 +37,11 @@ export default function InsightsComponent() {
       <p className="text-lg leading-7 mb-6">
         Explore the future with QubicGen, where innovation meets excellence. Partner with us for your IT consulting and training needs, and let&apos;s embark on a journey of success together.
       </p>
-      <button className="bg-blue-500 text-white py-2 px-6 rounded-md hover:bg-blue-600 transition duration-300">
+      <button className="bg-[#650e32] text-white py-2 px-6 rounded-md hover:bg-[#eab308] transition duration-300" >
         Contact Us
       </button>
     </div>
-      <div className="w-72 group">
+      <div className="w-72 group"  data-aos="fade-up" >
         <Image
           alt="xxxxxxxx"
           className="transition-transform duration-300 ease-in-out group-hover:scale-110 rounded-lg"
@@ -36,12 +50,12 @@ export default function InsightsComponent() {
           width="200"
         />
         <div className="mt-4 text-center">
-          <p className="font-bold text-lg">xxxxxxxx</p>
+          <p className="font-bold text-lg">Transforming challenges into opportunities</p>
           <p className="text-sm">Explore how QubicGen transforms challenges into opportunities.</p>
         </div>
       </div>
 
-      <div className="w-72 group">
+      <div className="w-72 group"  data-aos="fade-up">
         <Image
           alt="xxxxxxxx"
           className="transition-transform duration-300 ease-in-out group-hover:scale-110 rounded-lg"
@@ -55,7 +69,7 @@ export default function InsightsComponent() {
         </div>
       </div>
 
-      <div className="w-72 group">
+      <div className="w-72 group"  data-aos="fade-up">
         <Image
           alt="Who will dominate this mega market"
           className="transition-transform duration-300 ease-in-out group-hover:scale-110 rounded-lg"
@@ -69,7 +83,7 @@ export default function InsightsComponent() {
         </div>
       </div>
 
-      <div className="w-72 group">
+      <div className="w-72 group"  data-aos="fade-up">
         <Image
           alt="Reactive, theory of mind & self-aware"
           className="transition-transform duration-300 ease-in-out group-hover:scale-110 rounded-lg"
@@ -84,7 +98,7 @@ export default function InsightsComponent() {
       </div>
 
       {/* Additional Content */}
-      <div className="w-72 group">
+      <div className="w-72 group"  data-aos="fade-up">
         <Image
           alt="Accelerating Business Processes with RPA"
           className="transition-transform duration-300 ease-in-out group-hover:scale-110 rounded-lg"
@@ -98,7 +112,7 @@ export default function InsightsComponent() {
         </div>
       </div>
 
-      <div className="w-72 group">
+      <div className="w-72 group"  data-aos="fade-up">
         <Image
           alt="Innovative UI Path Solutions for Seamless Experiences"
           className="transition-transform duration-300 ease-in-out group-hover:scale-110 rounded-lg"
@@ -112,7 +126,7 @@ export default function InsightsComponent() {
         </div>
       </div>
 
-      <div className="w-72 group">
+      <div className="w-72 group"  data-aos="fade-up">
         <Image
           alt="Empowering Businesses with SQL Database Solutions"
           className="transition-transform duration-300 ease-in-out group-hover:scale-110 rounded-lg"
@@ -126,7 +140,7 @@ export default function InsightsComponent() {
         </div>
       </div>
 
-      <div className="w-72 group">
+      <div className="w-72 group"  data-aos="fade-up">
         <Image
           alt=".NET Development for Future-Ready Solutions"
           className="transition-transform duration-300 ease-in-out group-hover:scale-110 rounded-lg"
@@ -140,7 +154,7 @@ export default function InsightsComponent() {
         </div>
       </div>
 
-      <div className="w-72 group">
+      <div className="w-72 group"  data-aos="fade-up">
         <Image
           alt="Strategic Web Development for Online Success"
           className="transition-transform duration-300 ease-in-out group-hover:scale-110 rounded-lg"
