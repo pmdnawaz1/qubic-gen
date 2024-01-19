@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 import logo from "../../public/images/logo.png";
 import close from "../../assets/partnership/close.svg"
-import hamburger from "../../assets/partnership/hamburger-menu.svg"
+import hamburger from "../../public/images/hamburgerMenu.png"
 function NavBar() {
   const [navbar, setNavbar] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState("");
@@ -135,16 +135,26 @@ function NavBar() {
   };
   return (
     <div>
-      <nav className=" sm:mx-auto  bottom-[-60px]  sm:w-3/4 rounded-none sm:rounded-full bg-yellow-500 left-0 right-0 z-10">
+      <nav className=" sm:mx-auto  bottom-[-60px]  sm:w-3/4 rounded-none sm:rounded-full sm:bg-yellow-500 left-0 right-0 z-10">
         <div className="justify-between sm:flex-row-reverse px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
-            <div className="flex items-center sm:pt-2  justify-between py-3 md:py-5 md:block">
+            <div className="flex items-center sm:pt-2  flex-row-reverse sm:flex  justify-between py-3 md:py-5 md:block">
               {/* LOGO */}
               <div className="flex justify-end">
+              <div 
+                        onMouseEnter={() => handleMouseEnter("contact")}
+                        onMouseLeave={handleMouseLeave}
+                        className="sm:hidden md:hidden relative lg:hidden flex items-center mr-16 text-center sm:py-2 text-white"
+                      >
+                        <Image src={logo} alt="logo"
+                        height={50}
+                        width={70}
+                        />
+                      </div>
                       <div
                         onMouseEnter={() => handleMouseEnter("contact")}
                         onMouseLeave={handleMouseLeave}
-                        className="relative hidden sm:flex bg-customColor px-3 py-2 text-white"
+                        className="relative sm:flex bg-customColor px-3 py-2 text-white"
                       >
                         <Link
                           href="/contact"
@@ -153,16 +163,7 @@ function NavBar() {
                           Contact Us
                         </Link>
                       </div>
-                      <div 
-                        onMouseEnter={() => handleMouseEnter("contact")}
-                        onMouseLeave={handleMouseLeave}
-                        className="sm:hidden md:hidden relative lg:hidden flex px-3 py-2 text-white"
-                      >
-                        <Image src={logo} alt="logo"
-                        height={50}
-                        width={70}
-                        />
-                      </div>
+                      
 
                     </div>
               {/* HAMBURGER BUTTON FOR MOBILE */}
@@ -193,7 +194,7 @@ function NavBar() {
               }`}
             >
               <ul className="h-screen md:h-auto items-center justify-center md:flex ">
-                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                <li className="pb-6 text-xl sm:text-white py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
                 <div
                         onMouseEnter={() => handleMouseEnter("insights")}
                         onMouseLeave={handleMouseLeave}
@@ -207,7 +208,7 @@ function NavBar() {
                         </Link>
                       </div>
                 </li>
-                <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                <li className="pb-6 text-xl sm:text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
                 <div
                         onMouseEnter={() => handleMouseEnter("consultancy")}
                         onMouseLeave={handleMouseLeave}
@@ -221,7 +222,7 @@ function NavBar() {
                         </Link>
                       </div>
                 </li>
-                <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                <li className="pb-6 text-xl sm:text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
                 <div
                         onMouseEnter={() => handleMouseEnter("training")}
                         onMouseLeave={handleMouseLeave}
@@ -235,7 +236,7 @@ function NavBar() {
                         </Link>
                       </div>
                 </li>
-                <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                <li className="pb-6 text-xl sm:text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
                 <div
                         onMouseEnter={() => handleMouseEnter("whoweare")}
                         onMouseLeave={handleMouseLeave}
@@ -249,7 +250,7 @@ function NavBar() {
                         </Link>
                       </div>
                 </li>
-                <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                <li className="pb-6 text-xl sm:text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
                 <div
                         onMouseEnter={() => handleMouseEnter("services")}
                         onMouseLeave={handleMouseLeave}
