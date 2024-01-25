@@ -15,7 +15,7 @@ export default function Top() {
     setActiveLink(link);
   };
   return (
-    <div className=" relative sm:mt-10  sm:flex items-center -mt-10 justify-between mx-20 mb-10">
+    <div className=" relative sm:mt-10  sm:flex items-center -mt-10 justify-between mx-12 mb-10">
           <ScrollLink
             to="home"
             spy={true}
@@ -32,10 +32,11 @@ export default function Top() {
               height={32}
               alt="Logo"
               className="m-2"
-            />
+            />            
           </ScrollLink>
           {/* contact div */}
           <div className="hidden sm:flex items-center">
+          
             <Image
               src={phoneicon}
               alt="mobile icon"
