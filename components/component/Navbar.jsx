@@ -28,12 +28,12 @@ const NavbarItem = ({ title, dropdownItems }) => {
 
   return (
     <li
-      className={`group="true" relative ${isHovered ? "hover" : ""}`}      onMouseEnter={handleHover}
+      className={`group relative ${isHovered ? "hover" : ""}`} onMouseEnter={handleHover}
       onMouseLeave={handleLeave}
     >
       <button
         id={`${title.toLowerCase()}DropdownButton`}
-        className="pb-6 sm:text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-[#650e32] border-[#650e32] md:hover:text-[#650e32] md:hover:bg-transparent focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm inline-flex items-center relative group"
+        className="pb-6 sm:text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-[#650e32] border-[#650e32] md:hover:text-[#650e32] md:hover:bg-transparent focus:outline-none font-medium rounded-lg text-sm inline-flex items-center relative group"
         type="button"
       >
         {title}
@@ -106,7 +106,7 @@ function NavBar() {
           <div>
           <div className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "p-12 md:p-0 block" : "hidden"}`}>
           <ul className="h-screen md:h-auto items-center justify-center md:flex ">
-            <Link className="pb-6 sm:text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-[#650e32] border-[#650e32] md:hover:text-[#650e32] md:hover:bg-transparent focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm inline-flex items-center relative" group href="/"> Home </Link>
+            <Link className="pb-6 sm:text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-[#650e32] border-[#650e32] md:hover:text-[#650e32] md:hover:bg-transparent focus:outline-none font-medium rounded-lg text-sm inline-flex items-center relative group"  href="/"> Home </Link>
             <NavbarItem title="Insights" dropdownItems={[{ label: "Overview", link: "/insights" },{ label: "Insight 1", link: "#" }, { label: "Insight 2", link: "#" }]} />
             <NavbarItem title="Who we are" dropdownItems={[{ label: "Overview", link: "/whoweare" },{ label: "About 1", link: "#" }, { label: "About 2", link: "#" }]} />
             <NavbarItem title="What we do" dropdownItems={[{ label: "Overview", link: "/services" },{ label: "Industries", link: "#" }, { label: "Services", link: "#" }]} />
