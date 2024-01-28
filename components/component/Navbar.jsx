@@ -57,7 +57,7 @@ const NavbarItem = ({ title, dropdownItems }) => {
         </ul>
       </div>
     </li>
-  );
+  );  
 };
 function NavBar() {
   const [navbar, setNavbar] = useState(false);

@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import sendSym from "../../assets/partnership/send-01.png"
 import Image from 'next/image';
+import Link  from 'next/link';
 export default function Footer() {
   const [email, setEmail] = useState('');
 
@@ -56,34 +57,34 @@ export default function Footer() {
             <h3 className="text-xl font-semibold mb-2">Quick Links</h3>
             <ul>
               <li className="mb-1">
-                <a className="hover:underline" href="#">
+                <Link className="hover:underline" href="/whoweare">
                   Who we are
-                </a>
+                </Link>
               </li>
               <li className="mb-1">
-                <a className="hover:underline" href="#">
+                <Link className="hover:underline" href="/services">
                   What we do
-                </a>
+                </Link>
               </li>
               <li className="mb-1">
-                <a className="hover:underline" href="#">
+                <Link className="hover:underline" href="/services">
                   Consulting
-                </a>
+                </Link>
               </li>
               <li className="mb-1">
-                <a className="hover:underline" href="#">
+                <Link className="hover:underline" href="/services">
                   Trainings
-                </a>
+                </Link>
               </li>
               <li className="mb-1">
-                <a className="hover:underline" href="#">
+                <Link className="hover:underline" href="/insights">
                   Insights
-                </a>
+                </Link>
               </li>
               <li className="mb-1">
-                <a className="hover:underline" href="#">
-                  Contact
-                </a>
+                <Link className="hover:underline" href="/contact">
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>

@@ -22,7 +22,7 @@ export default function InsightsComponent() {
   return (
     <>
     <Header/>
-    <div className="flex flex-wrap gap-6 items-center justify-center p-8 mx-auto" data-aos="fade-up">
+    <div className="flex flex-wrap gap-6 items-center justify-center py-8 mx-auto" data-aos="fade-up">
       <div className="max-w-screen-md mx-auto p-8">
       <h2 className="text-4xl font-bold mb-4">Insights of QubicGen</h2>
       <p className="text-lg leading-7 mb-6">
