@@ -3,10 +3,6 @@ import { useState, useEffect } from 'react';
 import Image from "next/image"
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
-import RPA from "../../public/images/RPA.jpg"
-import sql from "../../public/images/sql.jpg"
-import UI from "../../public/images/UI.jpg"
-import Net from "../../public/images/Net.jpg"
 import './OurServices.css'
 import img2 from "../../assets/partnership/img2.png"
 import img3 from "../../assets/partnership/img3.png"
@@ -14,6 +10,8 @@ import img4 from "../../assets/partnership/img4.png"
 import img5 from "../../assets/partnership/img5.png"
 import img from "../../assets/partnership/img5.png"
 import img1 from "../../assets/partnership/img5.png"
+
+import Link from 'next/link';
 
 export default function Component() {
   const [isHovered, setIsHovered] = useState(Array(4).fill(false));
@@ -91,7 +89,7 @@ export default function Component() {
       <div className="py-8  px-4 lg:px-8">
         <h2 className="text-3xl text-black font-bold mb-6">Discover the Qubic Gen Expertise</h2>
         <div className="h-2 w-24 bg-[#FFD700] mb-8" />
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <Link href="/services" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {images.map((image, index) => (
             <div
               key={index}
@@ -116,15 +114,15 @@ export default function Component() {
                   width="600"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-opacity-50 bg-transperent p-4">
-                  <h3 className="text-xl font-semibold">{image.title}</h3>
-                  <button className="m-4 border-2 w-32 h-8 border-yellow-500 ">
+                  <h3 className="text-xl font-semibold m-2">{image.title}</h3>
+                  <button href="/services" className="m-4 border-2 w-32 h-8 border-yellow-500 ">
                     Know More
                   </button>
                 </div>
               </div>
             </div>
           ))}
-        </div>
+        </Link>
       </div>
     </div>
   );

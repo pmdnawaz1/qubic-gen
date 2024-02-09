@@ -40,7 +40,7 @@ const TestimonialsSection = () => {
       <div className="mx-auto max-w-screen-2xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <div className="md:flex md:items-end md:justify-between">
           <div className="max-w-xl">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-2xl">
+            <h2 className="text-4xl font-bold mb-4 ">
               What people say about us
             </h2>
             <div className="h-2 w-24 bg-[#FFD700] mb-8" />

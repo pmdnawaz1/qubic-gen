@@ -12,13 +12,7 @@ const WhoWeAre = () => {
 	return (
 		<div>
 			<Header />
-			<div className="container mx-auto">
-				<Image
-					src={whowearebanner}
-					alt="QubicGen Banner"
-					width={1900}
-					height={500}
-				/>
+			<div className=" mx-auto">
 				<About />
 				<div className="flex justify-center flex-wrap items-center p-4 bg-slate-100">
 					<div className="flex flex-col items-center p-8">

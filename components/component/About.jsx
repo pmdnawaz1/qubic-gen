@@ -16,7 +16,7 @@ const About = () => {
             <div className="flex lg:flex-row flex-col lg:gap-8 sm:gap-10 gap-12" data-aos="fade-up">
                 <div className="w-full lg:w-6/12">
                     <h2 className="w-full font-bold lg:text-4xl text-3xl lg:leading-10 leading-9">We are here to make great services for everyone</h2>
-                    <p className="font-normal text-base leading-6 text-gray-600 mt-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.In the first place we have granted to God, and by this our present charter confirmed for us and our heirs forever that the English Church shall be free, and shall have her rights entire,</p>
+                    <p className="font-normal text-base leading-6 text-gray-600 mt-6">At QubicGen, we believe in the transformative power of technology to solve complex problems and create value. Our journey began with a vision to empower businesses and individuals with innovative IT solutions that drive growth and efficiency. We are committed to excellence, leveraging our deep industry knowledge and technical expertise to deliver solutions that exceed expectations. Our dedication to our client&apos;s success is at the core of everything we do, making us a trusted partner in the ever-evolving digital landscape.</p>
                 </div>
                 <div className="w-full lg:w-6/12">
                     <Image className="lg:block hidden w-full" src="https://i.ibb.co/RjNH7QB/Rectangle-122-1.png" width={1000} height={1000} alt="people discussing on board" />
@@ -56,16 +56,16 @@ const About = () => {
             </div>
             <div className="grid sm:grid-cols-3 grid-cols-2 sm:gap-8 gap-4">
                 <div>
-                    <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 mt-6">Founded</p>
-                    <p className="font-normal text-base leading-6 text-gray-600 mt-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 mt-6">Our Origins</p>
+                    <p className="font-normal text-base leading-6 text-gray-600 mt-6">Founded in 2010, QubicGen has grown from a small startup into a leading provider of innovative IT solutions. Our passion for technology and commitment to solving complex challenges have been the driving forces behind our success.</p>
                 </div>
                 <div>
-                    <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 mt-6">50 montly enrichments</p>
-                    <p className="font-normal text-base leading-6 text-gray-600 mt-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 mt-6">Empowering Businesses</p>
+                    <p className="font-normal text-base leading-6 text-gray-600 mt-6">Every month, we enrich over 50 businesses across various industries, providing them with the tools and insights needed to thrive in the digital age. Our solutions are designed to boost efficiency, productivity, and growth.</p>
                 </div>
                 <div className="sm:block hidden">
-                    <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 mt-6">40 User</p>
-                    <p className="font-normal text-base leading-6 text-gray-600 mt-6">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                    <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800 mt-6">Global Reach</p>
+                    <p className="font-normal text-base leading-6 text-gray-600 mt-6">With a robust user base of over 40,000, QubicGen proudly serves clients worldwide. Our global footprint is a testament to the universal applicability and effectiveness of our solutions.</p>
                 </div>
             </div>
             <div className="sm:hidden block relative mt-8">
@@ -88,10 +88,10 @@ const About = () => {
             </div>
 
             <div className="flex lg:flex-row flex-col md:gap-14 gap-16 justify-between lg:mt-20 mt-16" data-aos="fade-up">
-                <div className="w-full lg:w-6/12">
+            <div className="w-full lg:w-6/12">
                     <h2 className="font-bold lg:text-4xl text-3xl lg:leading-9 leading-7 text-gray-800">Our Mission</h2>
-                    <p className="font-normal text-base leading-6 text-gray-600 mt-6 w-full lg:w-10/12 xl:w-9/12">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.In the first place we have granted to God, and by this our present charter confirmed for us and our heirs forever that the English Church shall be free, and shall have her rights entire, and her liberties inviolate; and we will that it be thus observed; which is apparent from</p>
-                    <p className="font-normal text-base leading-6 text-gray-600 w-full lg:w-10/12 xl:w-9/12 mt-10">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.In the first place we have granted to God, and by this our present charter confirmed for us and our heirs forever that the English Church shall be free, and shall have her rights entire, and her liberties inviolate; and we will that it be thus observed; which is apparent from</p>
+                    <p className="font-normal text-base leading-6 text-gray-600 mt-6 w-full lg:w-10/12 xl:w-9/12">At QubicGen, our mission is to empower businesses and individuals with cutting-edge IT solutions that drive innovation and growth. We strive to be at the forefront of technology, delivering scalable and sustainable solutions that meet the evolving needs of our clients. Our commitment to excellence and our passion for technology fuel our pursuit of creating impactful digital experiences.</p>
+                    <p className="font-normal text-base leading-6 text-gray-600 w-full lg:w-10/12 xl:w-9/12 mt-10">We believe in the transformative power of technology to address complex challenges and unlock new opportunities. Through collaboration, innovation, and dedication, we aim to deliver solutions that not only meet the current demands but also anticipate future trends. Our goal is to be a trusted partner in our clients' digital transformation journeys, ensuring their success in the digital age.</p>
                 </div>
                 <div className="w-full lg:w-6/12">
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 lg:gap-12 gap-10">
@@ -105,9 +105,9 @@ const About = () => {
                                 </svg>
                             </div>
                             <div className="">
-                                <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800">Team</p>
-                                <p className="mt-2 font-normal text-base leading-6 text-gray-600">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-                            </div>
+    <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800">Team</p>
+    <p className="mt-2 font-normal text-base leading-6 text-gray-600">At the heart of QubicGen is our team of passionate professionals. From engineers to designers, our team works collaboratively to innovate and solve the complex challenges of our clients. Their dedication and expertise are the foundation of our success.</p>
+</div>
                         </div>
 
                         {/* <!-- Board Card --> */}
@@ -121,9 +121,9 @@ const About = () => {
                                 </svg>
                             </div>
                             <div className="">
-                                <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800">Board</p>
-                                <p className="mt-2 font-normal text-base leading-6 text-gray-600">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-                            </div>
+    <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800">Board</p>
+    <p className="mt-2 font-normal text-base leading-6 text-gray-600">Our board comprises industry veterans and visionary leaders dedicated to steering QubicGen towards its mission. Their strategic guidance ensures we remain at the cutting edge of technology, driving growth and delivering value to our clients and stakeholders.</p>
+</div>
                         </div>
 
                         {/* <!-- Press Card --> */}
@@ -135,10 +135,10 @@ const About = () => {
                                 </svg>
                             </div>
                             <div className="">
-                                <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800">Press</p>
-                                <p className="mt-2 font-normal text-base leading-6 text-gray-600">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
-                            </div>
-                        </div>
+                    <p className="font-semibold lg:text-2xl text-xl lg:leading-6 leading-5 text-gray-800">Press</p>
+                    <p className="mt-2 font-normal text-base leading-6 text-gray-600">Stay updated with the latest news and insights from QubicGen. Our press section highlights our achievements, innovations, and contributions to the IT industry, showcasing our commitment to excellence and leadership in technology.</p>
+                </div>
+                                        </div>
                     </div>
                 </div>
             </div>

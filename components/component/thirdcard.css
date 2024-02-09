@@ -1,0 +1,114 @@
+.timeline {
+  width: 100%;
+  box-sizing: border-box;
+  background: #fff;
+  padding: 100px 50px;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .timeline {
+    max-width: 80rem;
+    padding: 100px 0;
+    margin: 0 auto;
+  }
+
+  .timeline:before {
+    left: calc(33% + 15px);
+    z-index: 1;
+  }
+}
+.timeline:before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 415px;
+  bottom: 0px;
+  width: 1px;
+  background: rgb(114, 114, 114);
+  z-index: 2;
+}
+
+.timeline:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.entry {
+  clear: both;
+  text-align: left;
+  position: relative;
+  padding-block-end: 1rem;
+}
+
+.entry .title {
+  margin-bottom: 0.5em;
+  float: none;
+  width: auto;
+  padding-right: 30px;
+  text-align: center;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .entry .title {
+    float: left;
+    width: 33%;
+    text-align: right;
+    padding-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .entry .title1 {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+}
+
+.entry .body {
+  margin-left: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .entry .body {
+    margin-left: calc(33% + 45px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .timeline:before {
+    left: 15px;
+  }
+  
+  .entry .title:before {
+    left: -35px;
+    right: 0;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .entry .title:before {
+    left: auto;
+    right: -3px;
+    transform: translate(-50%, -50%);
+  }
+  .entry .title h3{
+    font-size: 2rem;
+  }
+}
+
+.entry .body ul {
+  color: #aaa;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.entry .body ul li:before {
+  content: "–";
+  margin-right: 0.5em;
+}
+
+
+

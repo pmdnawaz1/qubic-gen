@@ -2,6 +2,7 @@
 import {useState, useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Link from 'next/link';
 
 const SecondCard = () => {
   useEffect(() => {
@@ -36,9 +37,11 @@ const SecondCard = () => {
           <button
             className=" items-center text-white bg-[#7b0032] h-15 m-5 p-4  hover:underline"
             variant="outline"
-            href="#"
           >
+            <Link href="/whoweare">
+
             Get to know us more &gt;
+            </Link>
             
           </button>
           

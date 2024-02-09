@@ -10,6 +10,7 @@ import HeaderCards from "../component/Header/HeaderCards";
 import Top from "../component/Header/Top";
 
 import Partnership from "./partnership";
+import ThirdCard from "./ThirdCard";
 
 
 export function Landing() {
@@ -24,6 +25,7 @@ export function Landing() {
         <Courosel/> 
         <HeaderCards/>    
       <SecondCard/>
+      <ThirdCard />
       <OurServices />
       <Partnership />
       <TestimonialCard/>
