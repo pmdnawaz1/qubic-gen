@@ -20,7 +20,7 @@ export default function Courosel() {
   };
   
   return (
-    <div>
+
     <div
       id="controls-carousel"
       className=" w-full "
@@ -115,6 +115,5 @@ export default function Courosel() {
         </span>
       </button>
     </div>
-  </div>
   )
 }

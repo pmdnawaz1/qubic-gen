@@ -64,7 +64,7 @@ function NavBar() {
 
   return (
     <div>
-      <nav className=" sm:mx-auto  bottom-[-60px]  sm:w-3/4 rounded-none sm:rounded-full sm:bg-yellow-500 left-0 right-0 z-10">
+      <nav className={`sm:mx-auto ${navbar ? "bottom-[-60px]" : ""} sm:w-3/4 rounded-none sm:rounded-full sm:bg-yellow-500 left-0 right-0 z-10`}>
         <div className="justify-between sm:flex-row-reverse px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
           <div>
             <div className="flex items-center sm:pt-2  flex-row-reverse sm:flex  justify-between py-3 md:py-5 md:block">
@@ -104,17 +104,14 @@ function NavBar() {
             </div>
           </div>
           <div>
-          <div className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "p-12 md:p-0 block" : "hidden"}`}>
-          <ul className="h-screen md:h-auto items-center justify-center md:flex ">
-            <Link className="pb-6 sm:text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-[#650e32] border-[#650e32] md:hover:text-[#650e32] md:hover:bg-transparent focus:outline-none font-medium rounded-lg text-sm inline-flex items-center relative group"  href="/"> Home </Link>
-            <Link className="pb-6 sm:text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-[#650e32] border-[#650e32] md:hover:text-[#650e32] md:hover:bg-transparent focus:outline-none font-medium rounded-lg text-sm inline-flex items-center relative group"  href="/insights"> Insights </Link>
-            <Link className="pb-6 sm:text-white py-2 md:px-6 text-center border-b-2 md:border-b-0 hover:bg-[#650e32] border-[#650e32] md:hover:text-[#650e32] md:hover:bg-transparent focus:outline-none font-medium rounded-lg text-sm inline-flex items-center relative group"  href="/whoweare"> Who We Are </Link>
-            {/* <NavbarItem title="Insights" dropdownItems={[{ label: "Overview", link: "/insights" },{ label: "Insight 1", link: "#" }, { label: "Insight 2", link: "#" }]} /> */}
-            {/* <NavbarItem title="Who we are" dropdownItems={[{ label: "Overview", link: "/whoweare" },{ label: "About 1", link: "#" }, { label: "About 2", link: "#" }]} /> */}
-            <NavbarItem title="What we do" dropdownItems={[{ label: "Overview", link: "/whatwedo" },{ label: "Learning Programs", link: "/learning" },{ label: "Services", link: "/services" } ]} />
-            {/* <NavbarItem title="Blog" dropdownItems={[{ label: "Blog 1", link: "#" }, { label: "Blog 2", link: "#" }]} /> */}
-          </ul>
-        </div>
+            <div className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? "md:p-0 block absolute bg-white m-0 w-full z-50" : "hidden"}`}>
+              <ul className={`${navbar ? "flex flex-col items-center" : "h-screen md:h-auto items-center justify-center md:flex"} `}>
+                <Link className={`pb-6 sm:text-white py-2 md:px-6 text-center ${navbar ? "" : "border-b-2 md:border-b-0 hover:bg-[#650e32] border-[#650e32] md:hover:text-[#650e32] md:hover:bg-transparent focus:outline-none"} font-medium rounded-lg text-sm inline-flex items-center relative group`} href="/"> Home </Link>
+                <Link className={`pb-6 sm:text-white py-2 md:px-6 text-center ${navbar ? "" : "border-b-2 md:border-b-0 hover:bg-[#650e32] border-[#650e32] md:hover:text-[#650e32] md:hover:bg-transparent focus:outline-none"} font-medium rounded-lg text-sm inline-flex items-center relative group`} href="/insights"> Insights </Link>
+                <Link className={`pb-6 sm:text-white py-2 md:px-6 text-center ${navbar ? "" : "border-b-2 md:border-b-0 hover:bg-[#650e32] border-[#650e32] md:hover:text-[#650e32] md:hover:bg-transparent focus:outline-none"} font-medium rounded-lg text-sm inline-flex items-center relative group`} href="/whoweare"> Who We Are </Link>
+                <NavbarItem title="What we do" dropdownItems={[{ label: "Overview", link: "/whatwedo" },{ label: "Learning Programs", link: "/learning" },{ label: "Services", link: "/services" } ]} />
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
